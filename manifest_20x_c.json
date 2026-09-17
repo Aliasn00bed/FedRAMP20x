@@ -1,0 +1,5804 @@
+{
+  "source_version": "2026.09.13.02",
+  "source_last_updated": "2026-09-13",
+  "track": "20x",
+  "class": "c",
+  "audience": "Providers",
+  "default_artifacts": {
+    "FRR": [
+      "Explanation of how the rule is followed, or an explanation of the reason and resulting risk to customers for not following the rule.",
+      "Verification that the implementation is appropriate for the rule, or that the reason for not implementing is accepted by a senior official.",
+      "Validation that the implementation is in place and working as intended, or that the reason for not implementing is accepted by a senior official.",
+      "Independent verification.",
+      "Independent validation."
+    ],
+    "KSI": [
+      "Explanation of measures (and their objectives) that demonstrate the Key Security Indicator, or an explanation of the reason and resulting risk to customers for not having measures available for that Key Security Indicator.",
+      "Explanation of the cycle for any measures that are implemented persistently (if applicable).",
+      "Verification that the measures demonstrate the Key Security Indicator, or that the reason for not having them is accepted.",
+      "Verification that the automation in place is accurate and sufficient to demonstrate appropriate measures for the Key Security Indicator, or that automation is not necessary for each measure.",
+      "Validation that the measures are accurately produced and are in place and working as intended, or that the reason for not having them is valid."
+    ]
+  },
+  "ksi_min_automated_methods_each": 2,
+  "needs_human_review": {
+    "ksis": [],
+    "rules": []
+  },
+  "rule_count": 168,
+  "rules_with_named_artifacts": 58,
+  "distinct_schemas": [
+    "https://fedramp.gov/schemas/fedramp-accepted-vulnerability-info-schema-2026-06-24.json",
+    "https://fedramp.gov/schemas/fedramp-certification-package-overview-schema-2026-06-24.json",
+    "https://fedramp.gov/schemas/fedramp-historical-ver-activity-schema-2026-06-24.json",
+    "https://fedramp.gov/schemas/fedramp-incident-report-schema-2026-06-24.json",
+    "https://fedramp.gov/schemas/fedramp-ongoing-certification-report-schema-2026-06-24.json",
+    "https://fedramp.gov/schemas/fedramp-security-decision-record-schema-2026-06-24.json",
+    "https://fedramp.gov/schemas/fedramp-significant-change-notifications-schema-2026-06-24.json",
+    "https://fedramp.gov/schemas/fedramp-vulnerability-detail-report-schema-2026-06-24.json"
+  ],
+  "key_security_indicators": [
+    {
+      "ksi_id": "KSI-CED-RAT",
+      "family": "CED",
+      "family_name": "Cybersecurity Education",
+      "name": "Reviewing All Training",
+      "statement": "The effectiveness of relevant cybersecurity education and training is persistently reviewed, including at least general training for all employees, role-specific training for employees in high risk roles, training for development and engineering staff on secure software delivery, and training for staff involved with incident response or disaster recovery.",
+      "optional_at_this_class": false,
+      "class_unspecified": false,
+      "classes_defined": [],
+      "controls": [
+        "cp-3",
+        "ir-2",
+        "ps-6",
+        "at-2",
+        "at-2.2",
+        "at-2.3",
+        "at-3.5",
+        "at-4",
+        "ir-2.3",
+        "at-3",
+        "sr-11.1"
+      ]
+    },
+    {
+      "ksi_id": "KSI-CMT-LMC",
+      "family": "CMT",
+      "family_name": "Change Management",
+      "name": "Logging Changes",
+      "statement": "Modifications to the cloud service offering are logged and monitored.",
+      "optional_at_this_class": false,
+      "class_unspecified": false,
+      "classes_defined": [],
+      "controls": [
+        "au-2",
+        "cm-3",
+        "cm-3.2",
+        "cm-4.2",
+        "cm-6",
+        "cm-8.3",
+        "ma-2"
+      ]
+    },
+    {
+      "ksi_id": "KSI-CMT-RMV",
+      "family": "CMT",
+      "family_name": "Change Management",
+      "name": "Redeploying vs Modifying",
+      "statement": "Changes to machine-based information resources are executed through the redeployment of version controlled resources rather than direct modification wherever reasonable.",
+      "optional_at_this_class": false,
+      "class_unspecified": false,
+      "classes_defined": [],
+      "controls": [
+        "cm-2",
+        "cm-3",
+        "cm-5",
+        "cm-6",
+        "cm-7",
+        "cm-8.1",
+        "si-3"
+      ]
+    },
+    {
+      "ksi_id": "KSI-CMT-RVP",
+      "family": "CMT",
+      "family_name": "Change Management",
+      "name": "Reviewing Change Procedures",
+      "statement": "The effectiveness of documented change management procedures is persistently reviewed.",
+      "optional_at_this_class": false,
+      "class_unspecified": false,
+      "classes_defined": [],
+      "controls": [
+        "cm-3",
+        "cm-3.2",
+        "cm-3.4",
+        "cm-5",
+        "cm-7.1",
+        "cm-9"
+      ]
+    },
+    {
+      "ksi_id": "KSI-CMT-VTD",
+      "family": "CMT",
+      "family_name": "Change Management",
+      "name": "Validating Throughout Deployment",
+      "statement": "Persistent testing and validation of changes throughout deployment is automated.",
+      "optional_at_this_class": false,
+      "class_unspecified": false,
+      "classes_defined": [],
+      "controls": [
+        "cm-3",
+        "cm-3.2",
+        "cm-4.2",
+        "si-2"
+      ]
+    },
+    {
+      "ksi_id": "KSI-CNA-DFP",
+      "family": "CNA",
+      "family_name": "Cloud Native Architecture",
+      "name": "Defining Functionality and Privileges",
+      "statement": "The functionality and privileges for infrastructure and services are strictly defined.",
+      "optional_at_this_class": false,
+      "class_unspecified": false,
+      "classes_defined": [],
+      "controls": [
+        "cm-2",
+        "si-3"
+      ]
+    },
+    {
+      "ksi_id": "KSI-CNA-EIS",
+      "family": "CNA",
+      "family_name": "Cloud Native Architecture",
+      "name": "Enforcing Intended State",
+      "statement": "Automated services are used to persistently assess the security of all machine-based information resources and automatically enforce their intended operational state.",
+      "optional_at_this_class": false,
+      "class_unspecified": false,
+      "classes_defined": [],
+      "controls": [
+        "ca-2.1",
+        "ca-7.1"
+      ]
+    },
+    {
+      "ksi_id": "KSI-CNA-IBP",
+      "family": "CNA",
+      "family_name": "Cloud Native Architecture",
+      "name": "Implementing Best Practices",
+      "statement": "The use and configuration of third-party machine-based information resources is persistently compared against the original provider's best practices and guidance.",
+      "optional_at_this_class": false,
+      "class_unspecified": false,
+      "classes_defined": [],
+      "controls": [
+        "ac-17.3",
+        "cm-2",
+        "pl-10"
+      ]
+    },
+    {
+      "ksi_id": "KSI-CNA-MAT",
+      "family": "CNA",
+      "family_name": "Cloud Native Architecture",
+      "name": "Minimizing Attack Surface",
+      "statement": "Machine-based information resources are persistently reviewed to ensure they have a minimal attack surface and that lateral movement is minimized if compromised.",
+      "optional_at_this_class": false,
+      "class_unspecified": false,
+      "classes_defined": [],
+      "controls": [
+        "ac-17.3",
+        "ac-18.1",
+        "ac-18.3",
+        "ac-20.1",
+        "ca-9",
+        "sc-7.3",
+        "sc-7.4",
+        "sc-7.5",
+        "sc-7.8",
+        "sc-8",
+        "sc-10",
+        "si-10",
+        "si-11",
+        "si-16"
+      ]
+    },
+    {
+      "ksi_id": "KSI-CNA-OFA",
+      "family": "CNA",
+      "family_name": "Cloud Native Architecture",
+      "name": "Optimizing for Availability",
+      "statement": "Machine-based information resources are persistently reviewed to ensure they are appropriately optimized for high availability and rapid recovery.",
+      "optional_at_this_class": false,
+      "class_unspecified": false,
+      "classes_defined": [],
+      "controls": []
+    },
+    {
+      "ksi_id": "KSI-CNA-RNT",
+      "family": "CNA",
+      "family_name": "Cloud Native Architecture",
+      "name": "Restricting Network Traffic",
+      "statement": "Machine-based information resources are persistently reviewed to ensure they are appropriately configured to limit inbound and outbound network traffic.",
+      "optional_at_this_class": false,
+      "class_unspecified": false,
+      "classes_defined": [],
+      "controls": [
+        "ac-17.3",
+        "ca-9",
+        "cm-7.1",
+        "sc-7.5",
+        "si-8"
+      ]
+    },
+    {
+      "ksi_id": "KSI-CNA-RVP",
+      "family": "CNA",
+      "family_name": "Cloud Native Architecture",
+      "name": "Reviewing Protections",
+      "statement": "The effectiveness of protection against denial of service attacks and other unwanted activity for machine-based information resources is persistently reviewed.",
+      "optional_at_this_class": false,
+      "class_unspecified": false,
+      "classes_defined": [],
+      "controls": [
+        "sc-5",
+        "si-8",
+        "si-8.2"
+      ]
+    },
+    {
+      "ksi_id": "KSI-CNA-ULN",
+      "family": "CNA",
+      "family_name": "Cloud Native Architecture",
+      "name": "Using Logical Networking",
+      "statement": "Logical networking and related capabilities are used and persistently reviewed to enforce traffic flow controls.",
+      "optional_at_this_class": false,
+      "class_unspecified": false,
+      "classes_defined": [],
+      "controls": [
+        "ac-12",
+        "ac-17.3",
+        "ca-9",
+        "sc-4",
+        "sc-7",
+        "sc-7.7",
+        "sc-8",
+        "sc-10"
+      ]
+    },
+    {
+      "ksi_id": "KSI-IAM-AAM",
+      "family": "IAM",
+      "family_name": "Identity and Access Management",
+      "name": "Automating Account Management",
+      "statement": "The lifecycle and privileges of all accounts, roles, and groups are securely managed using automation.",
+      "optional_at_this_class": false,
+      "class_unspecified": false,
+      "classes_defined": [],
+      "controls": [
+        "ac-2.2",
+        "ac-2.3",
+        "ac-2.13",
+        "ac-6.7",
+        "ia-4.4",
+        "ia-12",
+        "ia-12.2",
+        "ia-12.3",
+        "ia-12.5"
+      ]
+    },
+    {
+      "ksi_id": "KSI-IAM-APM",
+      "family": "IAM",
+      "family_name": "Identity and Access Management",
+      "name": "Adopting Passwordless Methods",
+      "statement": "Secure passwordless methods are used for user authentication and authorization when feasible, otherwise strong passwords with phishing-resistant MFA is used.",
+      "optional_at_this_class": false,
+      "class_unspecified": false,
+      "classes_defined": [],
+      "controls": [
+        "ac-3",
+        "ia-5.1",
+        "ia-5.2",
+        "ia-5.6",
+        "ia-6",
+        "ac-2",
+        "ia-2",
+        "ia-2.1",
+        "ia-2.2",
+        "ia-2.8",
+        "ia-5",
+        "ia-8",
+        "sc-23"
+      ]
+    },
+    {
+      "ksi_id": "KSI-IAM-ELP",
+      "family": "IAM",
+      "family_name": "Identity and Access Management",
+      "name": "Ensuring Least Privilege",
+      "statement": "Identity and access management measures are used and persistently reviewed to ensure each user or device can only access the resources they need.",
+      "optional_at_this_class": false,
+      "class_unspecified": false,
+      "classes_defined": [],
+      "controls": [
+        "ac-2.5",
+        "ac-2.6",
+        "ac-3",
+        "ac-4",
+        "ac-6",
+        "ac-12",
+        "ac-14",
+        "ac-17",
+        "ac-17.1",
+        "ac-17.2",
+        "ac-17.3",
+        "ac-20",
+        "ac-20.1",
+        "cm-2.7",
+        "cm-9",
+        "ia-2",
+        "ia-3",
+        "ia-4",
+        "ia-4.4",
+        "ia-5.2",
+        "ia-5.6",
+        "ia-11",
+        "ps-2",
+        "ps-3",
+        "ps-4",
+        "ps-5",
+        "ps-6",
+        "sc-4",
+        "sc-20",
+        "sc-21",
+        "sc-22",
+        "sc-23",
+        "sc-39",
+        "si-3"
+      ]
+    },
+    {
+      "ksi_id": "KSI-IAM-JIT",
+      "family": "IAM",
+      "family_name": "Identity and Access Management",
+      "name": "Authorizing Just-in-Time",
+      "statement": "A least-privileged, role and attribute-based, and just-in-time security authorization model is used and persistently reviewed for all user and non-user accounts and services.",
+      "optional_at_this_class": false,
+      "class_unspecified": false,
+      "classes_defined": [],
+      "controls": [
+        "ac-2",
+        "ac-2.1",
+        "ac-2.2",
+        "ac-2.3",
+        "ac-2.4",
+        "ac-2.6",
+        "ac-3",
+        "ac-4",
+        "ac-5",
+        "ac-6",
+        "ac-6.1",
+        "ac-6.2",
+        "ac-6.5",
+        "ac-6.7",
+        "ac-6.9",
+        "ac-6.10",
+        "ac-7",
+        "ac-20.1",
+        "ac-17",
+        "au-9.4",
+        "cm-5",
+        "cm-7",
+        "cm-7.2",
+        "cm-7.5",
+        "cm-9",
+        "ia-4",
+        "ia-4.4",
+        "ia-7",
+        "ps-2",
+        "ps-3",
+        "ps-4",
+        "ps-5",
+        "ps-6",
+        "ps-9",
+        "ra-5.5",
+        "sc-2",
+        "sc-23",
+        "sc-39"
+      ]
+    },
+    {
+      "ksi_id": "KSI-IAM-SNU",
+      "family": "IAM",
+      "family_name": "Identity and Access Management",
+      "name": "Securing Non-User Authentication",
+      "statement": "Appropriately secure authentication methods are used and persistently reviewed for non-user accounts and services.",
+      "optional_at_this_class": false,
+      "class_unspecified": false,
+      "classes_defined": [],
+      "controls": [
+        "ac-2",
+        "ac-2.2",
+        "ac-4",
+        "ac-6.5",
+        "ia-3",
+        "ia-5.2",
+        "ra-5.5"
+      ]
+    },
+    {
+      "ksi_id": "KSI-IAM-SUS",
+      "family": "IAM",
+      "family_name": "Identity and Access Management",
+      "name": "Responding to Suspicious Activity",
+      "statement": "Accounts with privileged access are disabled or otherwise secured in response to suspicious activity.",
+      "optional_at_this_class": false,
+      "class_unspecified": false,
+      "classes_defined": [],
+      "controls": [
+        "ac-2",
+        "ac-2.1",
+        "ac-2.3",
+        "ac-2.13",
+        "ac-7",
+        "ps-4",
+        "ps-8"
+      ]
+    },
+    {
+      "ksi_id": "KSI-INR-AAR",
+      "family": "INR",
+      "family_name": "Incident Response",
+      "name": "Generating After Action Reports",
+      "statement": "Incident after action reports are generated and lessons learned are persistently incorporated.",
+      "optional_at_this_class": false,
+      "class_unspecified": false,
+      "classes_defined": [],
+      "controls": [
+        "ir-3",
+        "ir-4",
+        "ir-4.1",
+        "ir-8"
+      ]
+    },
+    {
+      "ksi_id": "KSI-INR-RIR",
+      "family": "INR",
+      "family_name": "Incident Response",
+      "name": "Reviewing Incident Response Procedures",
+      "statement": "The effectiveness of documented incident response procedures is persistently reviewed.",
+      "optional_at_this_class": false,
+      "class_unspecified": false,
+      "classes_defined": [],
+      "controls": [
+        "ir-4",
+        "ir-4.1",
+        "ir-6",
+        "ir-6.1",
+        "ir-6.3",
+        "ir-7",
+        "ir-7.1",
+        "ir-8",
+        "ir-8.1",
+        "si-4.5"
+      ]
+    },
+    {
+      "ksi_id": "KSI-INR-RPI",
+      "family": "INR",
+      "family_name": "Incident Response",
+      "name": "Reviewing Past Incidents",
+      "statement": "Past incidents are persistently reviewed for patterns or vulnerabilities that were not previously apparent or identified.",
+      "optional_at_this_class": false,
+      "class_unspecified": false,
+      "classes_defined": [],
+      "controls": [
+        "ir-3",
+        "ir-4",
+        "ir-4.1",
+        "ir-5",
+        "ir-8"
+      ]
+    },
+    {
+      "ksi_id": "KSI-MLA-ALA",
+      "family": "MLA",
+      "family_name": "Monitoring, Logging, and Auditing",
+      "name": "Authorizing Log Access",
+      "statement": "A least-privileged, role and attribute-based, and just-in-time access authorization model is used and persistently reviewed for access to log data based on organizationally defined data sensitivity.",
+      "optional_at_this_class": false,
+      "class_unspecified": false,
+      "classes_defined": [],
+      "controls": [
+        "si-11"
+      ]
+    },
+    {
+      "ksi_id": "KSI-MLA-EVC",
+      "family": "MLA",
+      "family_name": "Monitoring, Logging, and Auditing",
+      "name": "Evaluating Configurations",
+      "statement": "The configuration of machine-based information resources, especially infrastructure as code, is persistently evaluated and tested.",
+      "optional_at_this_class": false,
+      "class_unspecified": false,
+      "classes_defined": [],
+      "controls": [
+        "ca-7",
+        "cm-2",
+        "cm-6",
+        "si-7.7"
+      ]
+    },
+    {
+      "ksi_id": "KSI-MLA-LET",
+      "family": "MLA",
+      "family_name": "Monitoring, Logging, and Auditing",
+      "name": "Logging Event Types",
+      "statement": "A list of information resources and event types that will be logged, monitored, and audited is maintained and persistently reviewed to ensure these activities occur.",
+      "optional_at_this_class": false,
+      "class_unspecified": false,
+      "classes_defined": [],
+      "controls": [
+        "ac-2.4",
+        "ac-6.9",
+        "ac-17.1",
+        "ac-20.1",
+        "au-2",
+        "au-7.1",
+        "au-12",
+        "si-4.4",
+        "si-4.5",
+        "si-7.7"
+      ]
+    },
+    {
+      "ksi_id": "KSI-MLA-OSM",
+      "family": "MLA",
+      "family_name": "Monitoring, Logging, and Auditing",
+      "name": "Operating SIEM Capability",
+      "statement": "A Security Information and Event Management (SIEM) or similar system(s) is used and persistently reviewed for centralized, tamper-resistant logging of events, activities, and changes.",
+      "optional_at_this_class": false,
+      "class_unspecified": false,
+      "classes_defined": [],
+      "controls": [
+        "ac-17.1",
+        "ac-20.1",
+        "au-2",
+        "au-3",
+        "au-3.1",
+        "au-4",
+        "au-5",
+        "au-6.1",
+        "au-6.3",
+        "au-7",
+        "au-7.1",
+        "au-8",
+        "au-9",
+        "au-11",
+        "ir-4.1",
+        "si-4.2",
+        "si-4.4",
+        "si-7.7"
+      ]
+    },
+    {
+      "ksi_id": "KSI-MLA-RVL",
+      "family": "MLA",
+      "family_name": "Monitoring, Logging, and Auditing",
+      "name": "Reviewing Logs",
+      "statement": "Logs are persistently reviewed and audited.",
+      "optional_at_this_class": false,
+      "class_unspecified": false,
+      "classes_defined": [],
+      "controls": [
+        "ac-2.4",
+        "ac-6.9",
+        "au-2",
+        "au-6",
+        "au-6.1",
+        "si-4",
+        "si-4.4"
+      ]
+    },
+    {
+      "ksi_id": "KSI-PIY-GIV",
+      "family": "PIY",
+      "family_name": "Policy and Inventory",
+      "name": "Generating Inventories",
+      "statement": "Authoritative sources are used to automatically generate real-time inventories of all information resources when needed.",
+      "optional_at_this_class": false,
+      "class_unspecified": false,
+      "classes_defined": [],
+      "controls": [
+        "cm-2.2",
+        "cm-7.5",
+        "cm-8",
+        "cm-8.1",
+        "cm-12",
+        "cm-12.1",
+        "cp-2.8"
+      ]
+    },
+    {
+      "ksi_id": "KSI-PIY-RES",
+      "family": "PIY",
+      "family_name": "Policy and Inventory",
+      "name": "Reviewing Executive Support",
+      "statement": "Executive support for achieving the provider's security goals is persistently reviewed and demonstrated.",
+      "optional_at_this_class": false,
+      "class_unspecified": false,
+      "classes_defined": [],
+      "controls": []
+    },
+    {
+      "ksi_id": "KSI-PIY-RIS",
+      "family": "PIY",
+      "family_name": "Policy and Inventory",
+      "name": "Reviewing Investments in Security",
+      "statement": "The effectiveness of the provider's investments in achieving security goals is persistently reviewed.",
+      "optional_at_this_class": false,
+      "class_unspecified": false,
+      "classes_defined": [],
+      "controls": [
+        "ac-5",
+        "ca-2",
+        "cp-2.1",
+        "cp-4.1",
+        "ir-3.2",
+        "pm-3",
+        "sa-2",
+        "sa-3",
+        "sr-2.1"
+      ]
+    },
+    {
+      "ksi_id": "KSI-PIY-RSD",
+      "family": "PIY",
+      "family_name": "Policy and Inventory",
+      "name": "Reviewing Security in the SDLC",
+      "statement": "The effectiveness of building security and privacy considerations into the Software Development Lifecycle and aligning with CISA Secure By Design principles is persistently reviewed.",
+      "optional_at_this_class": false,
+      "class_unspecified": false,
+      "classes_defined": [],
+      "controls": [
+        "ac-5",
+        "au-3.3",
+        "cm-3.4",
+        "pl-8",
+        "pm-7",
+        "sa-3",
+        "sa-8",
+        "sc-4",
+        "sc-18",
+        "si-10",
+        "si-11",
+        "si-16"
+      ]
+    },
+    {
+      "ksi_id": "KSI-PIY-RVD",
+      "family": "PIY",
+      "family_name": "Policy and Inventory",
+      "name": "Reviewing Vulnerability Disclosures",
+      "statement": "The effectiveness of the provider's vulnerability disclosure program is persistently reviewed.",
+      "optional_at_this_class": false,
+      "class_unspecified": false,
+      "classes_defined": [],
+      "controls": [
+        "ra-5.11"
+      ]
+    },
+    {
+      "ksi_id": "KSI-RPL-ABO",
+      "family": "RPL",
+      "family_name": "Recovery Planning",
+      "name": "Aligning Backups with Objectives",
+      "statement": "The alignment of machine-based information resource backups with defined recovery objectives is persistently reviewed.",
+      "optional_at_this_class": false,
+      "class_unspecified": false,
+      "classes_defined": [],
+      "controls": [
+        "cm-2.3",
+        "cp-6",
+        "cp-9",
+        "cp-10",
+        "cp-10.2",
+        "si-12"
+      ]
+    },
+    {
+      "ksi_id": "KSI-RPL-ARP",
+      "family": "RPL",
+      "family_name": "Recovery Planning",
+      "name": "Aligning Recovery Plan",
+      "statement": "The alignment of recovery plans with defined recovery objectives is persistently reviewed.",
+      "optional_at_this_class": false,
+      "class_unspecified": false,
+      "classes_defined": [],
+      "controls": [
+        "cp-2",
+        "cp-2.1",
+        "cp-2.3",
+        "cp-4.1",
+        "cp-6",
+        "cp-6.1",
+        "cp-6.3",
+        "cp-7",
+        "cp-7.1",
+        "cp-7.2",
+        "cp-7.3",
+        "cp-8",
+        "cp-8.1",
+        "cp-8.2",
+        "cp-10",
+        "cp-10.2"
+      ]
+    },
+    {
+      "ksi_id": "KSI-RPL-RRO",
+      "family": "RPL",
+      "family_name": "Recovery Planning",
+      "name": "Reviewing Recovery Objectives",
+      "statement": "The desired Recovery Time Objectives (RTO) and Recovery Point Objectives (RPO) are defined and persistently reviewed for alignment with the provider's business needs and capabilities.",
+      "optional_at_this_class": false,
+      "class_unspecified": false,
+      "classes_defined": [],
+      "controls": [
+        "cp-2.3",
+        "cp-10"
+      ]
+    },
+    {
+      "ksi_id": "KSI-RPL-TRC",
+      "family": "RPL",
+      "family_name": "Recovery Planning",
+      "name": "Testing Recovery Capabilities",
+      "statement": "The capability to recover from incidents and contingencies aligned with defined recovery objectives is persistently tested.",
+      "optional_at_this_class": false,
+      "class_unspecified": false,
+      "classes_defined": [],
+      "controls": [
+        "cp-2.1",
+        "cp-2.3",
+        "cp-4",
+        "cp-4.1",
+        "cp-6",
+        "cp-6.1",
+        "cp-9.1",
+        "cp-10",
+        "ir-3",
+        "ir-3.2"
+      ]
+    },
+    {
+      "ksi_id": "KSI-SCR-MIT",
+      "family": "SCR",
+      "family_name": "Supply Chain Risk",
+      "name": "Mitigating Supply Chain Risk",
+      "statement": "Persistently identify, review, and mitigate potential supply chain risks.",
+      "optional_at_this_class": false,
+      "class_unspecified": false,
+      "classes_defined": [],
+      "controls": [
+        "ac-20",
+        "ra-3.1",
+        "sa-9",
+        "sa-10",
+        "sa-11",
+        "sa-15.3",
+        "sa-22",
+        "si-7.1",
+        "sr-5",
+        "sr-6",
+        "ca-7.4",
+        "sc-18"
+      ]
+    },
+    {
+      "ksi_id": "KSI-SCR-MON",
+      "family": "SCR",
+      "family_name": "Supply Chain Risk",
+      "name": "Monitoring Supply Chain Risk",
+      "statement": "Third party software information resources are automatically monitored for upstream vulnerabilities using mechanisms that may include contractual notification requirements or active monitoring services.",
+      "optional_at_this_class": false,
+      "class_unspecified": false,
+      "classes_defined": [],
+      "controls": [
+        "ac-20",
+        "ca-3",
+        "ir-6.3",
+        "ps-7",
+        "ra-5",
+        "sa-9",
+        "si-5",
+        "sr-5",
+        "sr-6",
+        "sr-8"
+      ]
+    },
+    {
+      "ksi_id": "KSI-SVC-ACM",
+      "family": "SVC",
+      "family_name": "Service Configuration",
+      "name": "Automating Configuration Management",
+      "statement": "The configuration of machine-based information resources is managed using automation and persistently reviewed for drift.",
+      "optional_at_this_class": false,
+      "class_unspecified": false,
+      "classes_defined": [],
+      "controls": [
+        "ac-2.4",
+        "cm-2",
+        "cm-2.2",
+        "cm-2.3",
+        "cm-6",
+        "cm-7.1",
+        "pl-9",
+        "pl-10",
+        "sa-5",
+        "si-5",
+        "sr-10"
+      ]
+    },
+    {
+      "ksi_id": "KSI-SVC-ASM",
+      "family": "SVC",
+      "family_name": "Service Configuration",
+      "name": "Automating Secret Management",
+      "statement": "Management, protection, and regular rotation of digital keys, certificates, and other secrets is automated and persistently reviewed.",
+      "optional_at_this_class": false,
+      "class_unspecified": false,
+      "classes_defined": [],
+      "controls": [
+        "ac-17.2",
+        "ia-5.2",
+        "ia-5.6",
+        "sc-12",
+        "sc-17"
+      ]
+    },
+    {
+      "ksi_id": "KSI-SVC-EIS",
+      "family": "SVC",
+      "family_name": "Service Configuration",
+      "name": "Evaluating and Improving Security",
+      "statement": "Information resources are persistently evaluated for opportunities to improve security and those improvements are persistently made.",
+      "optional_at_this_class": false,
+      "class_unspecified": false,
+      "classes_defined": [],
+      "controls": [
+        "cm-7.1",
+        "cm-12.1",
+        "ma-2",
+        "pl-8",
+        "sc-7",
+        "sc-39",
+        "si-2.2",
+        "si-4",
+        "sr-10"
+      ]
+    },
+    {
+      "ksi_id": "KSI-SVC-PRR",
+      "family": "SVC",
+      "family_name": "Service Configuration",
+      "name": "Preventing Residual Risk",
+      "statement": "Plans, procedures, and the state of information resources are persistently reviewed after making changes to limit and remove unwanted residual elements that would likely negatively affect the confidentiality, integrity, or availability of federal customer data.",
+      "optional_at_this_class": false,
+      "class_unspecified": false,
+      "classes_defined": [],
+      "controls": [
+        "sc-4"
+      ]
+    },
+    {
+      "ksi_id": "KSI-SVC-RUD",
+      "family": "SVC",
+      "family_name": "Service Configuration",
+      "name": "Removing Unwanted Data",
+      "statement": "Unwanted federal customer data is removed promptly when requested by an agency in alignment with customer agreements, including from backups if appropriate; this typically applies when a customer spills information or when a customer seeks to remove information from a service due to a change in usage.",
+      "optional_at_this_class": false,
+      "class_unspecified": false,
+      "classes_defined": [],
+      "controls": [
+        "si-12.3",
+        "si-18.4"
+      ]
+    },
+    {
+      "ksi_id": "KSI-SVC-SIN",
+      "family": "SVC",
+      "family_name": "Service Configuration",
+      "name": "Securing Information",
+      "statement": "Information is encrypted or otherwise secured from unwanted access or modification.",
+      "optional_at_this_class": false,
+      "class_unspecified": false,
+      "classes_defined": [],
+      "controls": [
+        "ac-1",
+        "ac-17.2",
+        "cp-9.8",
+        "sc-8",
+        "sc-8.1",
+        "sc-13",
+        "sc-20",
+        "sc-21",
+        "sc-22",
+        "sc-23",
+        "sc-28",
+        "sc-28.1"
+      ]
+    },
+    {
+      "ksi_id": "KSI-SVC-VCM",
+      "family": "SVC",
+      "family_name": "Service Configuration",
+      "name": "Validating Communications",
+      "statement": "The authenticity and integrity of communications between machine-based information resources is persistently validated using automation.",
+      "optional_at_this_class": false,
+      "class_unspecified": false,
+      "classes_defined": [],
+      "controls": [
+        "sc-23",
+        "si-7.1"
+      ]
+    },
+    {
+      "ksi_id": "KSI-SVC-VRI",
+      "family": "SVC",
+      "family_name": "Service Configuration",
+      "name": "Validating Resource Integrity",
+      "statement": "Use cryptographic methods to validate the integrity of machine-based information resources.",
+      "optional_at_this_class": false,
+      "class_unspecified": false,
+      "classes_defined": [],
+      "controls": [
+        "cm-2.2",
+        "cm-8.3",
+        "sc-13",
+        "sc-23",
+        "si-7",
+        "si-7.1",
+        "sr-10"
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "rule_id": "AFC-CSO-ACK",
+      "ruleset": "AFC",
+      "ruleset_name": "Addressing FedRAMP Communication",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Acknowledge Receipt",
+      "force": "SHOULD",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers SHOULD promptly and automatically acknowledge the receipt of messages received from FedRAMP in their FedRAMP Security Inbox.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "FedRAMP Security Inbox",
+        "Promptly"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "AFC-CSO-CRA",
+      "ruleset": "AFC",
+      "ruleset_name": "Addressing FedRAMP Communication",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Complete Required Actions",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST complete the required actions in Emergency or Emergency Test designated messages sent by FedRAMP within the timeframe included in the message.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Certification Class"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "AFC-CSO-EMR",
+      "ruleset": "AFC",
+      "ruleset_name": "Addressing FedRAMP Communication",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Emergency Message Routing",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST route Emergency designated messages sent by FedRAMP to a senior security official for their awareness.",
+      "artifacts": [
+        "Configuration settings for FSI mailbox",
+        "Automated validation to check FSI mailbox configuration"
+      ],
+      "artifact_count": 2,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "AFC-CSO-IMA",
+      "ruleset": "AFC",
+      "ruleset_name": "Addressing FedRAMP Communication",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Important Message Actions",
+      "force": "SHOULD",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers SHOULD complete the required actions in Important designated messages sent by FedRAMP within the timeframe specified in the message.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Certification Class"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "AFC-CSO-INB",
+      "ruleset": "AFC",
+      "ruleset_name": "Addressing FedRAMP Communication",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Maintain a FedRAMP Security Inbox",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST establish and maintain an email address to receive messages from FedRAMP; this inbox is a FedRAMP Security Inbox (FSI).",
+      "artifacts": [
+        "Email address to receive messages from FedRAMP"
+      ],
+      "artifact_count": 1,
+      "schema_url": null,
+      "cadence": null,
+      "related": [
+        "AFC-CSO-NOC"
+      ],
+      "terms": [
+        "FedRAMP Security Inbox"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "AFC-CSO-NOC",
+      "ruleset": "AFC",
+      "ruleset_name": "Addressing FedRAMP Communication",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Notification of Changes",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST immediately notify FedRAMP of any changes to the email address for their FedRAMP Security Inbox.",
+      "artifacts": [
+        "Process, manual or automated, to notify FedRAMP of changes in the FedRAMP Security Inbox"
+      ],
+      "artifact_count": 1,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "FedRAMP Security Inbox"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "AFC-CSO-RCV",
+      "ruleset": "AFC",
+      "ruleset_name": "Addressing FedRAMP Communication",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Receive Email Without Disruption",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST receive and react to email messages from FedRAMP without disruption and without requiring additional actions from FedRAMP.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "AFC-CSO-TFG",
+      "ruleset": "AFC",
+      "ruleset_name": "Addressing FedRAMP Communication",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Trust @fedramp.gov and @gsa.gov",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST treat any email originating from an @fedramp.gov or @gsa.gov email address as if it was sent from FedRAMP by default; if such a message is confirmed to originate from someone other than FedRAMP then the FedRAMP Security Inbox rules no longer apply.",
+      "artifacts": [
+        "Configuration settings for FSI mailbox",
+        "Automated validation to check FSI mailbox configuration"
+      ],
+      "artifact_count": 2,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "FedRAMP Security Inbox"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "CCM-OCR-AFS",
+      "ruleset": "CCM",
+      "ruleset_name": "Collaborative Continuous Monitoring",
+      "subset": "all",
+      "group": "OCR",
+      "name": "Anonymized Feedback Summary",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST supply an anonymized and desensitized summary of the feedback, questions, and answers about each Ongoing Certification Report as an addendum to the Ongoing Certification Report OR in the next Ongoing Certification Report.",
+      "artifacts": [
+        "How the summary will be delivered"
+      ],
+      "artifact_count": 1,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "FedRAMP Certification Report",
+        "Ongoing Certification",
+        "Ongoing Certification Report (OCR)"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "CCM-OCR-AVL",
+      "ruleset": "CCM",
+      "ruleset_name": "Collaborative Continuous Monitoring",
+      "subset": "all",
+      "group": "OCR",
+      "name": "Report Availability",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST supply an Ongoing Certification Report to all necessary parties every 3 months, covering the entire period since the previous summary, in a consistent format that is human readable; this report MUST include high-level summaries of at least the following information (if applicable):",
+      "artifacts": [
+        "Most recent Ongoing Certification Report. If the report is not available, the provider MUST provide a sample report that includes all required information.",
+        "How the report will be delivered"
+      ],
+      "artifact_count": 2,
+      "schema_url": "https://fedramp.gov/schemas/fedramp-ongoing-certification-report-schema-2026-06-24.json",
+      "cadence": "3 months",
+      "related": [],
+      "terms": [
+        "Accepted Vulnerability",
+        "All Necessary Parties",
+        "Certification Data",
+        "Cloud Service Offering",
+        "FedRAMP Certification Report",
+        "FedRAMP Reportable Incident",
+        "Incident",
+        "Ongoing Certification",
+        "Ongoing Certification Report (OCR)",
+        "Transformative Change",
+        "Vulnerability"
+      ],
+      "last_updated": "2026-09-13",
+      "automatable_hint": true,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "CCM-OCR-FBM",
+      "ruleset": "CCM",
+      "ruleset_name": "Collaborative Continuous Monitoring",
+      "subset": "all",
+      "group": "OCR",
+      "name": "Feedback Mechanism",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST supply an asynchronous mechanism for all necessary parties to provide feedback or ask questions about each Ongoing Certification Report.",
+      "artifacts": [
+        "How to access the feedback mechanism."
+      ],
+      "artifact_count": 1,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "All Necessary Parties",
+        "FedRAMP Certification Report",
+        "Ongoing Certification",
+        "Ongoing Certification Report (OCR)"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "CCM-OCR-LSI",
+      "ruleset": "CCM",
+      "ruleset_name": "Collaborative Continuous Monitoring",
+      "subset": "all",
+      "group": "OCR",
+      "name": "Limit Sensitive Information",
+      "force": "MUST NOT",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST NOT irresponsibly disclose sensitive information in an Ongoing Certification Report that would likely have an adverse effect on the cloud service offering.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Cloud Service Offering",
+        "FedRAMP Certification Report",
+        "Likely",
+        "Ongoing Certification",
+        "Ongoing Certification Report (OCR)"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "CCM-OCR-NRD",
+      "ruleset": "CCM",
+      "ruleset_name": "Collaborative Continuous Monitoring",
+      "subset": "all",
+      "group": "OCR",
+      "name": "Next Report Date",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST supply the target date for their next Ongoing Certification Report with other public FedRAMP Certification Data.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Certification Data",
+        "FedRAMP Certification Report",
+        "Ongoing Certification",
+        "Ongoing Certification Report (OCR)"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "CCM-OCR-RPS",
+      "ruleset": "CCM",
+      "ruleset_name": "Collaborative Continuous Monitoring",
+      "subset": "all",
+      "group": "OCR",
+      "name": "Responsible Public Certification Report Sharing",
+      "force": "MAY",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MAY responsibly supply some or all of the information an Ongoing Certification Report to the public or other parties if the provider determines doing so will NOT likely have an adverse effect on the cloud service offering.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Cloud Service Offering",
+        "FedRAMP Certification Report",
+        "Likely",
+        "Ongoing Certification",
+        "Ongoing Certification Report (OCR)",
+        "Responsibly"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "CCM-OCR-SOR",
+      "ruleset": "CCM",
+      "ruleset_name": "Collaborative Continuous Monitoring",
+      "subset": "all",
+      "group": "OCR",
+      "name": "Spread Out Reports",
+      "force": "SHOULD",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers SHOULD establish a regular 3 month cycle for Ongoing Certification Reports that is spread out from the beginning, middle, or end of each quarter.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Ongoing Certification",
+        "Regularly"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "CCM-QTR-ACT",
+      "ruleset": "CCM",
+      "ruleset_name": "Collaborative Continuous Monitoring",
+      "subset": "all",
+      "group": "QTR",
+      "name": "Additional Content",
+      "force": "SHOULD",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers SHOULD supply additional information in Quarterly Reviews that the provider determines is of interest, use, or otherwise relevant to agencies.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Quarterly Review"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "CCM-QTR-MTG",
+      "ruleset": "CCM",
+      "ruleset_name": "Collaborative Continuous Monitoring",
+      "subset": "all",
+      "group": "QTR",
+      "name": "Quarterly Review Meeting",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers with Class C Certifications MUST host a synchronous Quarterly Review every 3 months, open to all necessary parties, to review aspects of the most recent Ongoing Certification Reports that the provider determines are of the most relevance to agencies.",
+      "artifacts": [
+        "selected ordinal recurrence for the Ongoing Certification Report cycle."
+      ],
+      "artifact_count": 1,
+      "schema_url": null,
+      "cadence": "3 months",
+      "related": [],
+      "terms": [
+        "All Necessary Parties",
+        "Ongoing Certification",
+        "Quarterly Review"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": true,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "CCM-QTR-NID",
+      "ruleset": "CCM",
+      "ruleset_name": "Collaborative Continuous Monitoring",
+      "subset": "all",
+      "group": "QTR",
+      "name": "No Irresponsible Disclosure",
+      "force": "MUST NOT",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST NOT irresponsibly disclose sensitive information in a Quarterly Review that would likely have an adverse effect on the cloud service offering.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Cloud Service Offering",
+        "Likely",
+        "Quarterly Review"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "CCM-QTR-NRD",
+      "ruleset": "CCM",
+      "ruleset_name": "Collaborative Continuous Monitoring",
+      "subset": "all",
+      "group": "QTR",
+      "name": "Next Review Date",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST publicly supply the target date for their next Quarterly Review with other public FedRAMP Certification Data.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Certification Data",
+        "Quarterly Review"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "CCM-QTR-REG",
+      "ruleset": "CCM",
+      "ruleset_name": "Collaborative Continuous Monitoring",
+      "subset": "all",
+      "group": "QTR",
+      "name": "Meeting Registration Info",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST supply either a registration link or a downloadable calendar file with meeting information for Quarterly Reviews to all necessary parties.",
+      "artifacts": [
+        "URL to the registration page or calendar file."
+      ],
+      "artifact_count": 1,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "All Necessary Parties",
+        "Quarterly Review"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "CCM-QTR-RTP",
+      "ruleset": "CCM",
+      "ruleset_name": "Collaborative Continuous Monitoring",
+      "subset": "all",
+      "group": "QTR",
+      "name": "Restrict Third Parties",
+      "force": "SHOULD NOT",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers SHOULD NOT invite third parties to attend Quarterly Reviews intended for agencies unless they have specific relevance.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Likely",
+        "Quarterly Review"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "CCM-QTR-RTR",
+      "ruleset": "CCM",
+      "ruleset_name": "Collaborative Continuous Monitoring",
+      "subset": "all",
+      "group": "QTR",
+      "name": "Record/Transcribe Reviews",
+      "force": "SHOULD",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers SHOULD record or transcribe Quarterly Reviews and supply them to all necessary parties.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "All Necessary Parties",
+        "Quarterly Review"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "CCM-QTR-SAR",
+      "ruleset": "CCM",
+      "ruleset_name": "Collaborative Continuous Monitoring",
+      "subset": "all",
+      "group": "QTR",
+      "name": "Schedule Around Reports",
+      "force": "SHOULD",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers SHOULD regularly schedule Quarterly Reviews to occur at least 3 business days after releasing an Ongoing Certification Report AND within 10 business days of such release.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": "3-10 bizdays",
+      "related": [],
+      "terms": [
+        "FedRAMP Certification Report",
+        "Ongoing Certification",
+        "Ongoing Certification Report (OCR)",
+        "Quarterly Review",
+        "Regularly"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": true,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "CCM-QTR-SCR",
+      "ruleset": "CCM",
+      "ruleset_name": "Collaborative Continuous Monitoring",
+      "subset": "all",
+      "group": "QTR",
+      "name": "Share Content Responsibly",
+      "force": "MAY",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MAY responsibly supply content prepared for a Quarterly Review to the public or other parties if the provider determines doing so will NOT likely have an adverse effect on the cloud service offering.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Cloud Service Offering",
+        "Likely",
+        "Quarterly Review",
+        "Responsibly"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "CCM-QTR-SRR",
+      "ruleset": "CCM",
+      "ruleset_name": "Collaborative Continuous Monitoring",
+      "subset": "all",
+      "group": "QTR",
+      "name": "Share Recordings Responsibly",
+      "force": "MAY",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MAY responsibly supply recordings or transcriptions of Quarterly Reviews to the public or other parties ONLY if the provider removes all agency information (comments, questions, names, etc.) AND determines doing so will NOT likely have an adverse effect on the cloud service offering.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Cloud Service Offering",
+        "Likely",
+        "Quarterly Review",
+        "Responsibly"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "CDS-CSO-AVR",
+      "ruleset": "CDS",
+      "ruleset_name": "Certification Data Sharing",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Availability Reporting",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers with Class C Certifications MUST maintain a web service, available to all necessary parties, that indicates current and historical availability of core services within the cloud service offering over at least the past 30 days, including availability incidents, in both human-readable and machine-readable formats; this service MUST be available even if the primary cloud service offering is unavailable.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "All Necessary Parties",
+        "Cloud Service Offering",
+        "Incident",
+        "Machine-Readable"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "CDS-CSO-CBF",
+      "ruleset": "CDS",
+      "ruleset_name": "Certification Data Sharing",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Consistency Between Formats",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST use automation to ensure information remains consistent between human-readable and machine-readable formats when FedRAMP Certification Data is provided in both formats.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Certification Data",
+        "Machine-Readable"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "CDS-CSO-FID",
+      "ruleset": "CDS",
+      "ruleset_name": "Certification Data Sharing",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Always Include FedRAMP ID",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST always include the FedRAMP ID of the related cloud service offering in all FedRAMP Certification Data once assigned, including all reports, notifications, and other communication that results from FedRAMP rules.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Certification Data",
+        "Cloud Service Offering"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "CDS-CSO-FRC",
+      "ruleset": "CDS",
+      "ruleset_name": "Certification Data Sharing",
+      "subset": "all",
+      "group": "CSO",
+      "name": "FedRAMP Certification Reports",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST include FedRAMP Certification Reports with their FedRAMP Certification Data without inappropriate modifications, and make such reports available within 2 weeks of receiving the materials from FedRAMP.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": "2 weeks",
+      "related": [],
+      "terms": [
+        "Certification Data",
+        "Certification Path",
+        "Cloud Service Offering"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": true,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "CDS-CSO-HAD",
+      "ruleset": "CDS",
+      "ruleset_name": "Certification Data Sharing",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Historical FedRAMP Certification Data",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST supply snapshots of FedRAMP Certification Data aligned to Ongoing Certification Reports to all necessary parties; these snapshots MUST be available for the duration of FedRAMP Certification.",
+      "artifacts": [
+        "Explanation of how to access this information."
+      ],
+      "artifact_count": 1,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "All Necessary Parties",
+        "Certification Data",
+        "FedRAMP Certification Report",
+        "Ongoing Certification",
+        "Ongoing Certification Report (OCR)"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "CDS-CSO-IRP",
+      "ruleset": "CDS",
+      "ruleset_name": "Certification Data Sharing",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Include Relevant Policies",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST supply all relevant policies and procedures in the FedRAMP Certification Data, including a human-readable and machine-readable reference that explains at least the following about each included policy and procedure:",
+      "artifacts": [
+        "Explanation of how to access this information."
+      ],
+      "artifact_count": 1,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Certification Data",
+        "FedRAMP Practices",
+        "Machine-Readable"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "CDS-CSO-PSM",
+      "ruleset": "CDS",
+      "ruleset_name": "Certification Data Sharing",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Per-Service Certification Materials",
+      "force": "MAY",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers with Class C Certifications MAY supply per-service FedRAMP Certification materials.",
+      "artifacts": [
+        "Explanation of the supplied materials, including how to access and use them."
+      ],
+      "artifact_count": 1,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "CDS-CSO-PUB",
+      "ruleset": "CDS",
+      "ruleset_name": "Certification Data Sharing",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Public Information",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST publicly share up-to-date information about the cloud service offering in both human-readable and JSON formats, including at least the following information that is available and applicable:",
+      "artifacts": [
+        "URL to the human-readable data.",
+        "URL to the machine-readable data."
+      ],
+      "artifact_count": 2,
+      "schema_url": "https://fedramp.gov/schemas/fedramp-certification-package-overview-schema-2026-06-24.json",
+      "cadence": null,
+      "related": [
+        "CDS-CSO-SVC",
+        "CCM-OCR-NRD"
+      ],
+      "terms": [
+        "Cloud Service Offering",
+        "FedRAMP Certification Report",
+        "FedRAMP Recognized",
+        "Ongoing Certification",
+        "Ongoing Certification Report (OCR)",
+        "Security Category",
+        "Trust Center"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": true,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "CDS-CSO-RIS",
+      "ruleset": "CDS",
+      "ruleset_name": "Certification Data Sharing",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Responsible Information Sharing",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST provide sufficient information in FedRAMP Certification Data to support agency authorization decisions but SHOULD NOT include sensitive information that would likely enable a threat actor to gain unauthorized access, cause harm, disrupt operations, or otherwise have a negative adverse impact on the cloud service offering.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Certification Data",
+        "Cloud Service Offering",
+        "Likely"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "CDS-CSO-RPS",
+      "ruleset": "CDS",
+      "ruleset_name": "Certification Data Sharing",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Responsible Public Package Sharing",
+      "force": "MAY",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MAY responsibly share some or all of the information in a FedRAMP Certification Package publicly or with other parties if the provider determines doing so will NOT likely have an adverse effect on the cloud service offering.",
+      "artifacts": [
+        "Explanation of if and how this information is shared with other parties."
+      ],
+      "artifact_count": 1,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Certification Package",
+        "Cloud Service Offering",
+        "Likely",
+        "Responsibly"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "CDS-CSO-SVC",
+      "ruleset": "CDS",
+      "ruleset_name": "Certification Data Sharing",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Public Service List",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST publicly share a detailed list of specific services and their security categories that are included in the cloud service offering using clear feature or service names that align with standard public marketing materials; this list MUST be complete enough for a potential customer to determine which services are and are not included in the FedRAMP Minimum Assessment Scope without requesting access to underlying FedRAMP Certification Data.",
+      "artifacts": [
+        "URL to the human-readable data.",
+        "URL to the machine-readable data (if applicable)."
+      ],
+      "artifact_count": 2,
+      "schema_url": "https://fedramp.gov/schemas/fedramp-certification-package-overview-schema-2026-06-24.json",
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Certification Data",
+        "Cloud Service Offering",
+        "Security Category"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": true,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "CDS-CSO-UTC",
+      "ruleset": "CDS",
+      "ruleset_name": "Certification Data Sharing",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Use Trust Centers",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST use a FedRAMP-compatible trust center to store and share FedRAMP Certification Data with all necessary parties.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": "https://fedramp.gov/schemas/fedramp-certification-package-overview-schema-2026-06-24.json",
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "All Necessary Parties",
+        "Certification Data",
+        "Trust Center"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": true,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "CDS-TRC-AAI",
+      "ruleset": "CDS",
+      "ruleset_name": "Certification Data Sharing",
+      "subset": "all",
+      "group": "TRC",
+      "name": "Agency Access Inventory",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Trust centers MUST maintain an inventory and history of federal agency users or systems with access to FedRAMP Certification Data and MUST make this information available to FedRAMP upon request.",
+      "artifacts": [
+        "Explanation of how FedRAMP can obtain this information."
+      ],
+      "artifact_count": 1,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Certification Data",
+        "Trust Center"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "CDS-TRC-ACL",
+      "ruleset": "CDS",
+      "ruleset_name": "Certification Data Sharing",
+      "subset": "all",
+      "group": "TRC",
+      "name": "Access Logging",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Trust centers MUST log access to FedRAMP Certification Data and store summaries of access for at least six months; such information, as it pertains to specific parties, SHOULD be made available upon request by those parties.",
+      "artifacts": [
+        "Explanation of how the appropriate parties can obtain this log information."
+      ],
+      "artifact_count": 1,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Certification Data",
+        "Trust Center"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "CDS-TRC-HMR",
+      "ruleset": "CDS",
+      "ruleset_name": "Certification Data Sharing",
+      "subset": "all",
+      "group": "TRC",
+      "name": "Human and Machine-Readable Certification Data",
+      "force": "SHOULD",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Trust centers SHOULD make FedRAMP Certification Data available to view and download in both human-readable and machine-readable formats.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Certification Data",
+        "Machine-Readable",
+        "Trust Center"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "CDS-TRC-PAC",
+      "ruleset": "CDS",
+      "ruleset_name": "Certification Data Sharing",
+      "subset": "all",
+      "group": "TRC",
+      "name": "Programmatic Access",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Trust centers MUST provide documented programmatic access to all FedRAMP Certification Data, including programmatic access to human-readable materials.",
+      "artifacts": [
+        "URL to the documentation for programmatic access."
+      ],
+      "artifact_count": 1,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Certification Data",
+        "Trust Center"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "CDS-TRC-SSM",
+      "ruleset": "CDS",
+      "ruleset_name": "Certification Data Sharing",
+      "subset": "all",
+      "group": "TRC",
+      "name": "Self-Service Access Management",
+      "force": "SHOULD",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Trust centers SHOULD include features that encourage all necessary parties to provision and manage access to FedRAMP Certification Data for their users and services directly.",
+      "artifacts": [
+        "URL or explanation how to access documentation of these features and capabilities."
+      ],
+      "artifact_count": 1,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "All Necessary Parties",
+        "Certification Data",
+        "Trust Center"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "CDS-TRC-USH",
+      "ruleset": "CDS",
+      "ruleset_name": "Certification Data Sharing",
+      "subset": "all",
+      "group": "TRC",
+      "name": "Uninterrupted Sharing",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Trust centers MUST share FedRAMP Certification Data with all necessary parties without interruption.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "All Necessary Parties",
+        "Certification Data",
+        "Trust Center"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "CDS-UTC-AAD",
+      "ruleset": "CDS",
+      "ruleset_name": "Certification Data Sharing",
+      "subset": "all",
+      "group": "UTC",
+      "name": "Agency Access Denial",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST notify FedRAMP within 5 business days of denying an agency access request for FedRAMP Certification Data.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": "5 bizdays",
+      "related": [],
+      "terms": [
+        "Certification Data"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": true,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "CDS-UTC-AGA",
+      "ruleset": "CDS",
+      "ruleset_name": "Certification Data Sharing",
+      "subset": "all",
+      "group": "UTC",
+      "name": "Agency Access",
+      "force": "SHOULD",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers SHOULD supply access to the FedRAMP Certification Package with agencies upon request.",
+      "artifacts": [
+        "URL or explanation of how to request these materials.",
+        "Explanation of how the provider decides whether or not to share these materials or other related policies."
+      ],
+      "artifact_count": 2,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Certification Package"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "CMU-CSO-CAT",
+      "ruleset": "CMU",
+      "ruleset_name": "Cryptographic Module Use",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Configuration of Agency Tenants",
+      "force": "SHOULD",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers SHOULD configure agency tenants by default to use cryptographic services that use cryptographic modules or update streams of cryptographic modules with active validations under the NIST Cryptographic Module Validation Program when such modules are available.",
+      "artifacts": [
+        "List of cryptographic modules used by default including whether these modules are validated under the NIST Cryptographic Module Validation Program or are update streams of such modules."
+      ],
+      "artifact_count": 1,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Validation"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "CMU-CSO-CMD",
+      "ruleset": "CMU",
+      "ruleset_name": "Cryptographic Module Use",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Cryptographic Module Documentation",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST document the cryptographic modules used in each service (or groups of services that use the same modules) where cryptographic services are used to protect federal customer data, including whether these modules are validated under the NIST Cryptographic Module Validation Program or are update streams of such modules.",
+      "artifacts": [
+        "List of cryptographic modules including whether these modules are validated under the NIST Cryptographic Module Validation Program or are update streams of such modules."
+      ],
+      "artifact_count": 1,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Federal Customer Data",
+        "Validation"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "CMU-CSO-UVM",
+      "ruleset": "CMU",
+      "ruleset_name": "Cryptographic Module Use",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Using Validated Cryptographic Modules",
+      "force": "SHOULD",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers with Class C Certifications SHOULD use cryptographic modules or update streams of cryptographic modules with active validations under the NIST Cryptographic Module Validation Program when using cryptographic services to protect federal customer data.",
+      "artifacts": [
+        "List of cryptographic modules including whether these modules are validated under the NIST Cryptographic Module Validation Program or are update streams of such modules."
+      ],
+      "artifact_count": 1,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Federal Customer Data",
+        "Validation"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "CPO-CSO-MTD",
+      "ruleset": "CPO",
+      "ruleset_name": "Certification Package Overview",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Certification Package Overview Metadata",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST also include the following basic metadata in their Certification Package Overview:",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Certification Package"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "CPO-CSO-OSA",
+      "ruleset": "CPO",
+      "ruleset_name": "Certification Package Overview",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Overall Summary of Assessment in Certification Package",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers seeking Class C Certification MUST also include the overall summary of their FedRAMP independent assessment, supplied by the assessor per IVV-IAS-OSA (Overall Summary of Assessment), in their Certification Package Overview.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [
+        "IVV-IAS-OSA"
+      ],
+      "terms": [
+        "Certification Package",
+        "FedRAMP Independent Assessment"
+      ],
+      "last_updated": "2026-06-25",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "CPO-CSO-OVR",
+      "ruleset": "CPO",
+      "ruleset_name": "Certification Package Overview",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Overview of the Cloud Service Offering",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST supply a Certification Package Overview within their FedRAMP Certification Package, in both human-readable and JSON formats, that includes at least all of the information required by the following rules:",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": "https://fedramp.gov/schemas/fedramp-certification-package-overview-schema-2026-06-24.json",
+      "cadence": null,
+      "related": [
+        "CPO-CSO-MTD",
+        "CDS-CSO-PUB",
+        "CDS-CSO-SVC",
+        "MAS-CSO-IIR",
+        "MAS-CSO-FLO",
+        "MAS-CSO-TPR",
+        "CMU-CSO-CMD",
+        "CDS-CSO-IRP",
+        "IVV-CSO-ICP"
+      ],
+      "terms": [
+        "Certification Class",
+        "Certification Data",
+        "Certification Package",
+        "Information Resource",
+        "Initial Incident Report (IIR)",
+        "Security Category",
+        "Third-Party Information Resource",
+        "Validation",
+        "Verification"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": true,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "CPO-CSX-CPM",
+      "ruleset": "CPO",
+      "ruleset_name": "Certification Package Overview",
+      "subset": "20x",
+      "group": "CSX",
+      "name": "Certification Package Maintenance for 20x",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers with 20x Class C Certifications MUST persistently maintain their FedRAMP Certification Package to ensure it is up to date and complete at least once every 2 weeks.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": "2 weeks",
+      "related": [],
+      "terms": [
+        "Certification Package",
+        "Persistently"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": true,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "FRC-APP-AFC",
+      "ruleset": "FRC",
+      "ruleset_name": "FedRAMP Certification",
+      "subset": "all",
+      "group": "APP",
+      "name": "Applying for FedRAMP Certification",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST complete the FedRAMP Certification Application Form in full to request an initial assessment by FedRAMP.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "FRC-APP-FCP",
+      "ruleset": "FRC",
+      "ruleset_name": "FedRAMP Certification",
+      "subset": "all",
+      "group": "APP",
+      "name": "Fresh FedRAMP Certification Package",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST supply a fresh initial FedRAMP Certification Package that shows the current status of the cloud service offering as verified and validated by the provider within the previous 7 days.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Certification Package",
+        "Cloud Service Offering",
+        "Validation",
+        "Verification"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "FRC-APP-FIA",
+      "ruleset": "FRC",
+      "ruleset_name": "FedRAMP Certification",
+      "subset": "all",
+      "group": "APP",
+      "name": "Fresh Independent Assessment",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers seeking Class C Certification MUST supply a fresh initial FedRAMP independent assessment that was completed by a FedRAMP Recognized independent assessment service within the previous 3 months.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": "3 months",
+      "related": [],
+      "terms": [
+        "FedRAMP Independent Assessment",
+        "FedRAMP Recognized"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": true,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "FRC-APP-MLF",
+      "ruleset": "FRC",
+      "ruleset_name": "FedRAMP Certification",
+      "subset": "all",
+      "group": "APP",
+      "name": "Marketplace Listing First",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST be listed in the FedRAMP Marketplace before applying for FedRAMP Certification, including:",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [
+        "MKT-CSO-MLR",
+        "MKT-CSO-PML",
+        "MKT-IIP-AGU",
+        "MKT-IIP-DCP"
+      ],
+      "terms": [],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "FRC-APP-NTP",
+      "ruleset": "FRC",
+      "ruleset_name": "FedRAMP Certification",
+      "subset": "all",
+      "group": "APP",
+      "name": "No Third-Party Applicants",
+      "force": "MUST NOT",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST NOT use a third party to apply for a FedRAMP Certification on their behalf; this includes independent assessment services.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "FRC-APP-USA",
+      "ruleset": "FRC",
+      "ruleset_name": "FedRAMP Certification",
+      "subset": "all",
+      "group": "APP",
+      "name": "Updating Stale Assessments",
+      "force": "MAY",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MAY freshen a stale initial independent verification and validation assessment by having a FedRAMP Recognized independent assessment service review any changes between the original assessment and the current status of the cloud service offering in place of a full re-assessment, UNLESS the stale assessment is more than 9 months old.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Cloud Service Offering",
+        "FedRAMP Recognized",
+        "Validation",
+        "Verification"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "FRC-APS-ATO",
+      "ruleset": "FRC",
+      "ruleset_name": "FedRAMP Certification",
+      "subset": "all",
+      "group": "APS",
+      "name": "Agency Authorization to Operate",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers seeking a FedRAMP Rev5 Agency Certification MUST have completed the Authorization to Operate (ATO) process with their agency sponsor for the cloud service offering, concluding with a formal signed ATO letter that the agency has sent over official government channels to FedRAMP.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Cloud Service Offering"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "FRC-CCL-DCC",
+      "ruleset": "FRC",
+      "ruleset_name": "FedRAMP Certification",
+      "subset": "all",
+      "group": "CCL",
+      "name": "Downgrading Certification Class",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST apply for a new FedRAMP Certification to downgrade their Certification Class.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [
+        "FRC-CCL-DNP"
+      ],
+      "terms": [
+        "All Necessary Parties",
+        "Certification Class"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "FRC-CCL-DNP",
+      "ruleset": "FRC",
+      "ruleset_name": "FedRAMP Certification",
+      "subset": "all",
+      "group": "CCL",
+      "name": "Downgrade Notification Period",
+      "force": "SHOULD",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers SHOULD notify all necessary parties at least 120 days in advance of an intended downgrade or cancellation of FedRAMP Certification.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "All Necessary Parties"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "FRC-CCL-UCC",
+      "ruleset": "FRC",
+      "ruleset_name": "FedRAMP Certification",
+      "subset": "all",
+      "group": "CCL",
+      "name": "Upgrading Certification Class",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST apply for a new FedRAMP Certification to upgrade their Certification Class; all applicable requirements MUST be met in advance.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Certification Class"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "FRC-CLA-ASF",
+      "ruleset": "FRC",
+      "ruleset_name": "FedRAMP Certification",
+      "subset": "all",
+      "group": "CLA",
+      "name": "Approved Alternative Security Frameworks",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers seeking a FedRAMP Class A Certification MUST have completed a certification or equivalent process, including an independent assessment if applicable, from one of the following alternative security frameworks within the past 12 months:",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Security Category"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "FRC-CLA-EAM",
+      "ruleset": "FRC",
+      "ruleset_name": "FedRAMP Certification",
+      "subset": "all",
+      "group": "CLA",
+      "name": "External Assessment Materials",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers seeking a FedRAMP Class A Certification MUST supply the following materials from their alternative security framework assessment to all necessary parties:",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "All Necessary Parties",
+        "Verification"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "FRC-CLA-IVV",
+      "ruleset": "FRC",
+      "ruleset_name": "FedRAMP Certification",
+      "subset": "all",
+      "group": "CLA",
+      "name": "Optional Independent Verification and Validation",
+      "force": "MAY",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers seeking a FedRAMP Class A Certification MAY have the FedRAMP Certification Package independently verified and validated by a FedRAMP Recognized assessor before submission to FedRAMP.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Certification Package",
+        "FedRAMP Recognized",
+        "Validation",
+        "Verification"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "FRC-CLA-MFR",
+      "ruleset": "FRC",
+      "ruleset_name": "FedRAMP Certification",
+      "subset": "all",
+      "group": "CLA",
+      "name": "Mandatory FedRAMP Rules for Class A",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers seeking a Class A FedRAMP Certification MUST address all rules in this FedRAMP Class A Certification subset (FRC-CLA) AND the following additional FedRAMP Class A rules; the appropriate artifacts or information mapping for all rules MUST be supplied in the FedRAMP Certification Package.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [
+        "FRC-CSO-POP",
+        "MAS-CSO-IIR",
+        "CDS-CSO-PUB",
+        "CDS-CSO-UTC",
+        "CDS-UTC-AAD",
+        "AFC-CSO-INB",
+        "AFC-CSO-RCV",
+        "AFC-CSO-CRA",
+        "IEC-CSO-EFR",
+        "IEC-CSO-FIR",
+        "VDR-CSO-DET",
+        "CCM-OCR-AVL",
+        "CCM-OCR-NRD",
+        "IVV-CSX-AIA",
+        "FRC-CSO-PKG",
+        "FRC-CSO-JSN",
+        "KSI-CMT-LMC",
+        "KSI-CNA-RNT",
+        "KSI-CED-RAT",
+        "KSI-IAM-AAM",
+        "KSI-INR-RIR",
+        "KSI-SVC-SIN",
+        "KSI-IAM-APM"
+      ],
+      "terms": [
+        "Artifacts",
+        "Certification Data",
+        "Certification Package",
+        "Certification Path",
+        "Certification Type",
+        "FedRAMP Security Inbox",
+        "Final Incident Report (FIR)",
+        "Incident",
+        "Information Resource",
+        "Initial Incident Report (IIR)",
+        "Ongoing Certification Report (OCR)",
+        "Trust Center",
+        "Validation",
+        "Verification",
+        "Vulnerability",
+        "Vulnerability Detection",
+        "Vulnerability Response"
+      ],
+      "last_updated": "2026-07-14",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "FRC-CLA-OFR",
+      "ruleset": "FRC",
+      "ruleset_name": "FedRAMP Certification",
+      "subset": "all",
+      "group": "CLA",
+      "name": "Address Optional FedRAMP Rules for Class A",
+      "force": "MAY",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers seeking a Class A FedRAMP Certification MAY address the following additional optional FedRAMP Class A rules (if applicable):",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [
+        "CCM-QTR-MTG",
+        "CDS-CSO-PSM",
+        "CMU-CSO-UVM",
+        "FRC-APP-FIA",
+        "IVV-CSO-FIA",
+        "SDR-CSX-KMT",
+        "VER-TFR-IRI",
+        "VER-TFR-MRH",
+        "VER-TFR-NRI"
+      ],
+      "terms": [
+        "Certification Data",
+        "FedRAMP Independent Assessment",
+        "Incident",
+        "Quarterly Review",
+        "Security Decision Record (SDR)",
+        "Validation",
+        "Verification",
+        "Vulnerability"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "FRC-CLA-RFR",
+      "ruleset": "FRC",
+      "ruleset_name": "FedRAMP Certification",
+      "subset": "all",
+      "group": "CLA",
+      "name": "Recommended FedRAMP Rules for Class A",
+      "force": "SHOULD",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers seeking a Class A FedRAMP Certification SHOULD address the following additional recommended FedRAMP Class A rules (if applicable):",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [
+        "CDS-CSO-AVR",
+        "CPO-CSF-CPM",
+        "CPO-CSX-CPM",
+        "IEC-CSO-IIR",
+        "IEC-CSO-OIR",
+        "VDR-TFR-MVX",
+        "VDR-TFR-PCD",
+        "VDR-TFR-PDD",
+        "VDR-TFR-PSD",
+        "VDR-TFR-PVR",
+        "VER-TFR-EVU"
+      ],
+      "terms": [
+        "Certification Data",
+        "Certification Package",
+        "Drift",
+        "Incident",
+        "Initial Incident Report (IIR)",
+        "Ongoing Incident Report (OIR)",
+        "Persistently",
+        "Validation",
+        "Verification",
+        "Vulnerability",
+        "Vulnerability Detection",
+        "Vulnerability Response"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "FRC-CSO-FCP",
+      "ruleset": "FRC",
+      "ruleset_name": "FedRAMP Certification",
+      "subset": "all",
+      "group": "CSO",
+      "name": "FedRAMP Certification Profile",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST identify a target FedRAMP Certification Profile and apply all relevant FedRAMP Practices to the cloud service offering.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Certification Profile",
+        "Cloud Service Offering",
+        "FedRAMP Practices",
+        "Handle",
+        "Information Resource",
+        "Security Category",
+        "Third-Party Information Resource"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "FRC-CSO-JSN",
+      "ruleset": "FRC",
+      "ruleset_name": "FedRAMP Certification",
+      "subset": "all",
+      "group": "CSO",
+      "name": "FedRAMP JSON Schemas",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST supply machine-readable information in JSON documents that are valid against the corresponding JSON schema when a rule contains a FedRAMP JSON schema, UNLESS otherwise specified in the rule.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Machine-Readable"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "FRC-CSO-MRA",
+      "ruleset": "FRC",
+      "ruleset_name": "FedRAMP Certification",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Maintain Responsibility and Accountability",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST maintain responsibility and accountability for the accuracy and completeness of all information in the FedRAMP Certification Package, especially when they engage a third party (such as an independent assessor, advisory service, or external tools) to supply information on their behalf.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Certification Package"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "FRC-CSO-PKG",
+      "ruleset": "FRC",
+      "ruleset_name": "FedRAMP Certification",
+      "subset": "all",
+      "group": "CSO",
+      "name": "FedRAMP Certification Package",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers seeking a Certification MUST supply a complete FedRAMP Certification Package to FedRAMP for initial certification; the FedRAMP Certification Package MUST include at least the following information:",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": "https://fedramp.gov/schemas/fedramp-certification-package-overview-schema-2026-06-24.json",
+      "cadence": null,
+      "related": [
+        "CPO-CSO-OVR",
+        "SDR-CSO-FRR",
+        "CCM-OCR-AVL"
+      ],
+      "terms": [
+        "Certification Package",
+        "Cloud Service Offering",
+        "FedRAMP Certification Report",
+        "Initial Certification",
+        "Ongoing Certification",
+        "Ongoing Certification Report (OCR)",
+        "Security Decision Record (SDR)",
+        "Validation"
+      ],
+      "last_updated": "2026-06-25",
+      "automatable_hint": true,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "FRC-CSO-POP",
+      "ruleset": "FRC",
+      "ruleset_name": "FedRAMP Certification",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Pick One Program Certification Type",
+      "force": "MUST NOT",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST NOT seek both FedRAMP Rev5 Program Certification and FedRAMP 20x Program Certification for the same cloud service offering; pick one type.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Cloud Service Offering"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "FRC-CSX-MAS",
+      "ruleset": "FRC",
+      "ruleset_name": "FedRAMP Certification",
+      "subset": "20x",
+      "group": "CSX",
+      "name": "Application within MAS",
+      "force": "SHOULD",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers SHOULD apply ALL Key Security Indicators to ALL aspects of their cloud service offering that are within the FedRAMP Minimum Assessment Scope.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Cloud Service Offering"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "FRC-CSX-MOT",
+      "ruleset": "FRC",
+      "ruleset_name": "FedRAMP Certification",
+      "subset": "20x",
+      "group": "CSX",
+      "name": "Metrics Over Time for Key Security Indicators",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers seeking 20x Class C Certification MUST supply historical metrics including status from persistent validation over at least the past 6 months for all Key Security Indicators.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Initial Certification",
+        "Persistently",
+        "Validation"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "FRC-CSX-VVK",
+      "ruleset": "FRC",
+      "ruleset_name": "FedRAMP Certification",
+      "subset": "20x",
+      "group": "CSX",
+      "name": "Automated Verification and Validation of Key Security Indicators",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers seeking 20x Class C Certification MUST implement automated methods to persistently verify and validate the accuracy and completeness of Key Security Indicators with at least 2 automated methods for each Key Security Indicator.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Persistently",
+        "Validation",
+        "Verification"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "FRC-CSX-VVR",
+      "ruleset": "FRC",
+      "ruleset_name": "FedRAMP Certification",
+      "subset": "20x",
+      "group": "CSX",
+      "name": "Automated Verification and Validation of FedRAMP Rules",
+      "force": "SHOULD",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers seeking 20x Class C Certification SHOULD implement automated methods to persistently verify and validate the accuracy and completeness of the Security Decision Record for FedRAMP rules when applicable.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Persistently",
+        "Security Decision Record (SDR)",
+        "Validation",
+        "Verification"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "IEC-CSO-AIR",
+      "ruleset": "IEC",
+      "ruleset_name": "Incident Evaluation and Communication",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Automated Incident Reporting",
+      "force": "SHOULD",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers SHOULD use automation to minimize human intervention in the process of reporting FedRAMP Reportable Incidents to all affected parties.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "All Affected Parties",
+        "FedRAMP Reportable Incident",
+        "Incident"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "IEC-CSO-DPR",
+      "ruleset": "IEC",
+      "ruleset_name": "Incident Evaluation and Communication",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Default PAIN Rating",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST treat FedRAMP Reportable Incidents as if they have a Potential Agency Impact N-rating (PAIN) of 5 UNLESS they promptly estimate the PAIN rating following the rule in IEC-CSO-EFI (Estimate Federal Impact).",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [
+        "IEC-CSO-EFI"
+      ],
+      "terms": [
+        "FedRAMP Reportable Incident",
+        "Incident",
+        "Potential Agency Impact",
+        "Promptly"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "IEC-CSO-EFI",
+      "ruleset": "IEC",
+      "ruleset_name": "Incident Evaluation and Communication",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Estimate Federal Impact",
+      "force": "SHOULD",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers SHOULD promptly estimate the likely adverse impact of an incident on agency customers to assign a Potential Agency Impact N-rating; this step is called Incident Rating.",
+      "artifacts": [
+        "An incident log showing an example of one or more incidents being evaluated including the reason for the determination. The log can be from real incidents, simulated incidents, or a combination of sources."
+      ],
+      "artifact_count": 1,
+      "schema_url": "https://fedramp.gov/schemas/fedramp-incident-report-schema-2026-06-24.json",
+      "cadence": null,
+      "related": [
+        "IEC-CSO-DPR"
+      ],
+      "terms": [
+        "Debilitating Customer Effect",
+        "Disruptive Customer Effect",
+        "Incident",
+        "Likely",
+        "Minimal Customer Effect",
+        "Narrow Customer Effect",
+        "Potential Agency Impact",
+        "Promptly"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": true,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "IEC-CSO-EFR",
+      "ruleset": "IEC",
+      "ruleset_name": "Incident Evaluation and Communication",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Evaluate FedRAMP Reportability",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST promptly evaluate incidents to determine if they affect confidentiality or integrity of federal customer data or are likely to affect confidentiality or integrity of federal customer data; such incidents are FedRAMP Reportable Incidents and must be reported following the FedRAMP Incident Evaluation and Communication rules.",
+      "artifacts": [
+        "An incident log showing an example of one or more incidents being evaluated including the reason for the determination. The log can be from real incidents, simulated incidents, or a combination of sources."
+      ],
+      "artifact_count": 1,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "FedRAMP Reportable Incident",
+        "Federal Customer Data",
+        "Incident",
+        "Likely",
+        "Promptly"
+      ],
+      "last_updated": "2026-07-02",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "IEC-CSO-FIR",
+      "ruleset": "IEC",
+      "ruleset_name": "Incident Evaluation and Communication",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Final Incident Report",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers with Class C Certifications MUST responsibly notify all affected parties by providing a Final Incident Report once the incident has been resolved and recovery is complete, including final updates to all previously reported information.",
+      "artifacts": [
+        "An Final Incident Report for one or more incidents. The report can be from real incidents, simulated incidents, or a combination of sources."
+      ],
+      "artifact_count": 1,
+      "schema_url": "https://fedramp.gov/schemas/fedramp-incident-report-schema-2026-06-24.json",
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "All Affected Parties",
+        "Final Incident Report (FIR)",
+        "Incident",
+        "Responsibly"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": true,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "IEC-CSO-IIR",
+      "ruleset": "IEC",
+      "ruleset_name": "Incident Evaluation and Communication",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Initial Incident Report",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers with Class C Certifications MUST responsibly notify all affected parties after identifying FedRAMP Reportable Incidents by providing an Initial Incident Report with as much of the following information that is available at the time of reporting and/or the current relevant status for each item:",
+      "artifacts": [
+        "An Initial Incident Report for one or more incidents. The report can be from real incidents, simulated incidents, or a combination of sources."
+      ],
+      "artifact_count": 1,
+      "schema_url": "https://fedramp.gov/schemas/fedramp-incident-report-schema-2026-06-24.json",
+      "cadence": null,
+      "related": [
+        "IEC-CSO-EFI"
+      ],
+      "terms": [
+        "All Affected Parties",
+        "FedRAMP Reportable Incident",
+        "Incident",
+        "Initial Incident Report (IIR)",
+        "Responsibly"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": true,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "IEC-CSO-OIR",
+      "ruleset": "IEC",
+      "ruleset_name": "Incident Evaluation and Communication",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Ongoing Incident Reports",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers with Class C Certifications MUST responsibly notify all affected parties of ongoing activity as new information becomes available during incident response for FedRAMP Reportable Incidents, including updates (or lack of updates) to all previously reported information and as much of the following additional information that is available and/or the current relevant status for each item:",
+      "artifacts": [
+        "An Ongoing Incident Report for one or more incidents. The report can be from real incidents, simulated incidents, or a combination of sources."
+      ],
+      "artifact_count": 1,
+      "schema_url": "https://fedramp.gov/schemas/fedramp-incident-report-schema-2026-06-24.json",
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "All Affected Parties",
+        "FedRAMP Reportable Incident",
+        "Incident",
+        "Responsibly",
+        "Vulnerability Response"
+      ],
+      "last_updated": "2026-09-13",
+      "automatable_hint": true,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "IVV-CSO-DUS",
+      "ruleset": "IVV",
+      "ruleset_name": "Independent Verification and Validation",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Document Use of Representative Samples",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST document and explain the use of representative samples during verification and validation when using representative samples as allowed by IVV-CSO-USR (Use Representative Samples).",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [
+        "IVV-CSO-USR"
+      ],
+      "terms": [
+        "Validation",
+        "Verification"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "IVV-CSO-FIA",
+      "ruleset": "IVV",
+      "ruleset_name": "Independent Verification and Validation",
+      "subset": "all",
+      "group": "CSO",
+      "name": "FedRAMP Independent Assessments",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers with Class C Certifications MUST persistently complete an independent verification and validation assessment of all applicable FedRAMP rules with a FedRAMP Recognized independent assessment service OR FedRAMP at least once per year; this is a FedRAMP independent assessment.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": "1 years",
+      "related": [],
+      "terms": [
+        "Certification Class",
+        "FedRAMP Independent Assessment",
+        "FedRAMP Recognized",
+        "Persistently",
+        "Validation",
+        "Verification"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": true,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "IVV-CSO-ICP",
+      "ruleset": "IVV",
+      "ruleset_name": "Independent Verification and Validation",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Inclusion in Certification Package",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST supply the results of FedRAMP independent assessments in their FedRAMP Certification Package without inappropriate modification.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [
+        "IVV-IAS-VIP"
+      ],
+      "terms": [
+        "Certification Package",
+        "FedRAMP Independent Assessment",
+        "Verification"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "IVV-CSO-RAA",
+      "ruleset": "IVV",
+      "ruleset_name": "Independent Verification and Validation",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Receiving Assessor Advice",
+      "force": "MAY",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MAY ask for and accept advice from their assessor during assessment regarding techniques and procedures that will improve their security posture or the effectiveness, clarity, and accuracy of their verification, validation and reporting procedures, UNLESS doing so is likely to compromise the objectivity and integrity of the assessment.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Likely",
+        "Validation",
+        "Verification"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "IVV-CSO-SEE",
+      "ruleset": "IVV",
+      "ruleset_name": "Independent Verification and Validation",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Supply Evidence of Effectiveness",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST supply evidence to all necessary assessors of the effectiveness of the measures that have been implemented to meet FedRAMP Practices; this evidence is the result of validation.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [
+        "IVV-CSO-SEI"
+      ],
+      "terms": [
+        "All Necessary Assessors",
+        "FedRAMP Practices",
+        "Validation"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "IVV-CSO-SEI",
+      "ruleset": "IVV",
+      "ruleset_name": "Independent Verification and Validation",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Supply Evidence of Implementation",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST supply evidence to all necessary assessors of the implementation of the measures that have been documented to meet FedRAMP Practices; this evidence is the result of verification.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "All Necessary Assessors",
+        "FedRAMP Practices",
+        "Verification"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "IVV-CSO-STE",
+      "ruleset": "IVV",
+      "ruleset_name": "Independent Verification and Validation",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Supply Technical Explanations",
+      "force": "SHOULD",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers SHOULD supply all necessary assessors with technical explanations, demonstrations, and other relevant supporting information about the technical capabilities they employ to address FedRAMP rules; this SHOULD be supplied as necessary to ensure the assessor can effectively complete verification and validation.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "All Necessary Assessors",
+        "Validation",
+        "Verification"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "IVV-CSO-USR",
+      "ruleset": "IVV",
+      "ruleset_name": "Independent Verification and Validation",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Use Representative Samples",
+      "force": "MAY",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MAY use representative samples as appropriate during verification and validation.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Persistently",
+        "Validation",
+        "Verification"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "IVV-CSX-AIA",
+      "ruleset": "IVV",
+      "ruleset_name": "Independent Verification and Validation",
+      "subset": "20x",
+      "group": "CSX",
+      "name": "Annual Independent Assessments for 20x",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers with 20x Class C Certifications MUST include all Key Security Indicators in a FedRAMP independent assessment at least once per year.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": "1 years",
+      "related": [],
+      "terms": [
+        "FedRAMP Independent Assessment",
+        "Persistently",
+        "Validation",
+        "Verification"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": true,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "MAS-CSO-FLO",
+      "ruleset": "MAS",
+      "ruleset_name": "Minimum Assessment Scope",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Information Flows and Security Categories",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST clearly identify, document, and explain information flows and security categories for ALL information resources or sets of information resources in the cloud service offering.",
+      "artifacts": [
+        "A machine readable output containing all required data of the permitted connections between components of the cloud service offering that are likely to handle federal customer data or likely to impact the confidentiality, integrity, or availability of federal customer data handled by the cloud service offering.",
+        "A human readable explanation of how the machine readable output is derived.",
+        "The code for the automated process used to generate the machine readable output."
+      ],
+      "artifact_count": 3,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Cloud Service Offering",
+        "Handle",
+        "Information Resource",
+        "Security Category",
+        "Third-Party Information Resource"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "MAS-CSO-IIR",
+      "ruleset": "MAS",
+      "ruleset_name": "Minimum Assessment Scope",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Identify Information Resources",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST identify a set of information resources to assess for FedRAMP Certification that includes all information resources that are likely to handle federal customer data or likely to impact the confidentiality, integrity, or availability of federal customer data handled by the cloud service offering; this set of information resources is the cloud service offering.",
+      "artifacts": [
+        "A machine readable output containing all required data of the components of the cloud service offering that are likely to handle federal customer data or likely to impact the confidentiality, integrity, or availability of federal customer data handled by the cloud service offering.",
+        "A human readable explanation of how the machine readable output is derived.",
+        "The code for the automated process used to generate the machine readable output."
+      ],
+      "artifact_count": 3,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Certification Package",
+        "Cloud Service Offering",
+        "Federal Customer Data",
+        "Handle",
+        "Information Resource",
+        "Likely"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "MAS-CSO-MDI",
+      "ruleset": "MAS",
+      "ruleset_name": "Minimum Assessment Scope",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Metadata Inclusion",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST include metadata (including metadata about federal customer data) in the Minimum Assessment Scope ONLY IF MAS-CSO-IIR (Identify Information Resources) APPLIES.",
+      "artifacts": [
+        "A machine readable output containing all required data of the metadata collected or maintained by the cloud service offering that are likely to handle federal customer data or likely to impact the confidentiality, integrity, or availability of federal customer data handled by the cloud service offering.",
+        "A human readable explanation of how the machine readable output is derived.",
+        "The code for the automated process used to generate the machine readable output."
+      ],
+      "artifact_count": 3,
+      "schema_url": null,
+      "cadence": null,
+      "related": [
+        "MAS-CSO-IIR"
+      ],
+      "terms": [
+        "Federal Customer Data",
+        "Information Resource",
+        "Initial Incident Report (IIR)"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "MAS-CSO-SUP",
+      "ruleset": "MAS",
+      "ruleset_name": "Minimum Assessment Scope",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Supplemental Information",
+      "force": "MAY",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MAY include additional materials about other information resources that are not part of the cloud service offering in a FedRAMP Certification Package supplement; these resources will not be FedRAMP Certified and MUST be clearly marked and separated from the cloud service offering.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Certification Package",
+        "Cloud Service Offering",
+        "FedRAMP Certified",
+        "Information Resource"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "MAS-CSO-TPR",
+      "ruleset": "MAS",
+      "ruleset_name": "Minimum Assessment Scope",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Third-Party Information Resources",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST address the potential impact to federal customer data from third-party information resources used by the cloud service offering, ONLY IF MAS-CSO-IIR (Identify Information Resources) APPLIES, by documenting the following information about each applicable third-party information resource:",
+      "artifacts": [
+        "A machine readable output containing all required data of the third-party information resources of the cloud service offering that are likely to handle federal customer data or likely to impact the confidentiality, integrity, or availability of federal customer data handled by the cloud service offering.",
+        "A human readable explanation of how the machine readable output is derived.",
+        "The code for the automated process used to generate the machine readable output."
+      ],
+      "artifact_count": 3,
+      "schema_url": "https://fedramp.gov/schemas/fedramp-certification-package-overview-schema-2026-06-24.json",
+      "cadence": null,
+      "related": [
+        "MAS-CSO-IIR"
+      ],
+      "terms": [
+        "Cloud Service Offering",
+        "Federal Customer Data",
+        "Information Resource",
+        "Initial Incident Report (IIR)",
+        "Third-Party Information Resource"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": true,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "MKT-CSO-MLR",
+      "ruleset": "MKT",
+      "ruleset_name": "Marketplace Listing",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Marketplace Listing Requirements",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST address at least these FedRAMP rules to apply for a new FedRAMP Marketplace listing OR to request updates to an existing listing:",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [
+        "CDS-CSO-PUB"
+      ],
+      "terms": [
+        "Certification Data"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "MKT-CSO-PML",
+      "ruleset": "MKT",
+      "ruleset_name": "Marketplace Listing",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Provider Marketplace Listing Requests",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST notify FedRAMP using the FedRAMP Marketplace Providing Listing Request Form to request a listing in the FedRAMP Marketplace.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "MKT-IIP-AGU",
+      "ruleset": "MKT",
+      "ruleset_name": "Marketplace Listing",
+      "subset": "all",
+      "group": "IIP",
+      "name": "Agency Use Cases",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST demonstrate that a cloud service offering is intended for one of the following use cases:",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [
+        "MKT-FRP-SOF"
+      ],
+      "terms": [
+        "Cloud Service Offering",
+        "Information Resource",
+        "Third-Party Information Resource"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "MKT-IIP-DCP",
+      "ruleset": "MKT",
+      "ruleset_name": "Marketplace Listing",
+      "subset": "all",
+      "group": "IIP",
+      "name": "Demonstrating Continuous Progress",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST demonstrate continuous progress towards a FedRAMP Certification, documented in their Trust Center or website and updated at least quarterly; progress is measured by the provider against documented goals and milestones.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Trust Center"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "MKT-IIP-DLA",
+      "ruleset": "MKT",
+      "ruleset_name": "Marketplace Listing",
+      "subset": "all",
+      "group": "IIP",
+      "name": "Deadline for Assessment",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST demonstrate that an assessment for a FedRAMP Certification Class B, C, or D has been scheduled within 2 years of initial listing in the Initial Implementation Phase.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": "2 years",
+      "related": [],
+      "terms": [
+        "Certification Class"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": true,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "SCG-CSO-AUP",
+      "ruleset": "SCG",
+      "ruleset_name": "Secure Configuration Guide",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Use Instructions",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST include instructions in the FedRAMP Certification Package that explain how to obtain and use the Secure Configuration Guide.",
+      "artifacts": [
+        "URL or explanation of how to request these materials.",
+        "Explanation of how the provider decides whether or not to share these materials or other related policies."
+      ],
+      "artifact_count": 2,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Certification Package"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "SCG-CSO-PUB",
+      "ruleset": "SCG",
+      "ruleset_name": "Secure Configuration Guide",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Public Secure Configuration Guidance",
+      "force": "SHOULD",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers SHOULD make the Secure Configuration Guide available publicly.",
+      "artifacts": [
+        "Explanation of how to access this information",
+        "or explanation why this functionality is not available"
+      ],
+      "artifact_count": 2,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "SCG-CSO-RSC",
+      "ruleset": "SCG",
+      "ruleset_name": "Secure Configuration Guide",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Recommended Secure Configuration",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST create, maintain, and make available recommendations for securely configuring their cloud services (the Secure Configuration Guide) that includes at least the following information:",
+      "artifacts": [
+        "URL to the human-readable data.",
+        "URL to the machine-readable data."
+      ],
+      "artifact_count": 2,
+      "schema_url": "https://fedramp.gov/schemas/fedramp-certification-package-overview-schema-2026-06-24.json",
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Cloud Service Offering",
+        "Privileged Account",
+        "Top-Level Administrative Account"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": true,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "SCG-CSO-SDF",
+      "ruleset": "SCG",
+      "ruleset_name": "Secure Configuration Guide",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Secure Defaults",
+      "force": "SHOULD",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers SHOULD set all settings to their recommended secure defaults for top-level administrative accounts and privileged accounts when initially provisioned.",
+      "artifacts": [
+        "Explanation of how to access this information",
+        "or explanation why this functionality is not available"
+      ],
+      "artifact_count": 2,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Privileged Account",
+        "Top-Level Administrative Account"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "SCG-ENH-API",
+      "ruleset": "SCG",
+      "ruleset_name": "Secure Configuration Guide",
+      "subset": "all",
+      "group": "ENH",
+      "name": "API Capability",
+      "force": "SHOULD",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers SHOULD offer the capability to view and adjust security settings via an API or similar capability.",
+      "artifacts": [
+        "Explanation of how to access this information",
+        "or explanation why this functionality is not available"
+      ],
+      "artifact_count": 2,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "SCG-ENH-CMP",
+      "ruleset": "SCG",
+      "ruleset_name": "Secure Configuration Guide",
+      "subset": "all",
+      "group": "ENH",
+      "name": "Comparison Capability",
+      "force": "SHOULD",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers SHOULD offer the capability to compare all current settings for top-level administrative accounts and privileged accounts to the recommended secure defaults.",
+      "artifacts": [
+        "Explanation of how to access this information",
+        "or explanation why this functionality is not available"
+      ],
+      "artifact_count": 2,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Privileged Account",
+        "Top-Level Administrative Account"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "SCG-ENH-EXP",
+      "ruleset": "SCG",
+      "ruleset_name": "Secure Configuration Guide",
+      "subset": "all",
+      "group": "ENH",
+      "name": "Export Capability",
+      "force": "SHOULD",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers SHOULD offer the capability to export all security settings in a machine-readable format.",
+      "artifacts": [
+        "Explanation of how to access this information",
+        "or explanation why this functionality is not available"
+      ],
+      "artifact_count": 2,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Machine-Readable"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "SCG-ENH-MRG",
+      "ruleset": "SCG",
+      "ruleset_name": "Secure Configuration Guide",
+      "subset": "all",
+      "group": "ENH",
+      "name": "Machine-Readable Guidance",
+      "force": "SHOULD",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers SHOULD also provide the Secure Configuration Guide in a machine-readable format that can be used by customers or third-party tools to compare against current settings.",
+      "artifacts": [
+        "Explanation of how to access this information",
+        "or explanation why this functionality is not available"
+      ],
+      "artifact_count": 2,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Machine-Readable"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "SCG-ENH-VRH",
+      "ruleset": "SCG",
+      "ruleset_name": "Secure Configuration Guide",
+      "subset": "all",
+      "group": "ENH",
+      "name": "Versioning and Release History",
+      "force": "SHOULD",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers SHOULD provide versioning and a release history for recommended secure default settings for top-level administrative accounts and privileged accounts as they are adjusted over time.",
+      "artifacts": [
+        "Explanation of how to access this information",
+        "or explanation why this functionality is not available"
+      ],
+      "artifact_count": 2,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Privileged Account",
+        "Top-Level Administrative Account"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "SCN-ADP-NTF",
+      "ruleset": "SCN",
+      "ruleset_name": "Significant Change Notification",
+      "subset": "all",
+      "group": "ADP",
+      "name": "Notification Requirements",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST notify all necessary parties within 10 business days after finishing adaptive changes, also including the following information:",
+      "artifacts": [
+        "At least the most recent SCN notification including the date it was sent and the date the change was applied. Additional examples may be provided. If no SCN notifications have been sent then this artifact is not required."
+      ],
+      "artifact_count": 1,
+      "schema_url": null,
+      "cadence": "10 bizdays",
+      "related": [],
+      "terms": [
+        "Adaptive Change",
+        "All Necessary Parties",
+        "Regularly",
+        "Significant Change",
+        "Vulnerability"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": true,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "SCN-CSO-ARI",
+      "ruleset": "SCN",
+      "ruleset_name": "Significant Change Notification",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Additional Relevant Information",
+      "force": "MAY",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MAY include additional relevant information in Significant Change Notifications.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Significant Change"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "SCN-CSO-EMG",
+      "ruleset": "SCN",
+      "ruleset_name": "Significant Change Notification",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Emergency Changes",
+      "force": "MAY",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MAY execute significant changes (including transformative changes) during an emergency or incident without following the Significant Change Notification rules in advance. In such emergencies, providers MUST follow all relevant procedures, notify all necessary parties, retroactively provide all Significant Change Notification materials, and complete appropriate assessment after the incident.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "All Necessary Parties",
+        "Certification Package",
+        "Incident",
+        "Significant Change",
+        "Transformative Change"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "SCN-CSO-EVA",
+      "ruleset": "SCN",
+      "ruleset_name": "Significant Change Notification",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Evaluate Changes",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST evaluate all potential significant changes to determine the type of significant change and follow the appropriate Significant Change Notification rules.",
+      "artifacts": [
+        "Evidence of significant change evaluation including a description fo the change, the determined type, and an explanation for the decision. At least one example must be provided for each type of change. Real examples are prefered but the provider may use fictitious examples as long as the example provides evidence of the decision making process."
+      ],
+      "artifact_count": 1,
+      "schema_url": "https://fedramp.gov/schemas/fedramp-significant-change-notifications-schema-2026-06-24.json",
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Adaptive Change",
+        "Certification Class",
+        "Certification Class Change",
+        "Routine Recurring Change",
+        "Significant Change",
+        "Transformative Change"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": true,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "SCN-CSO-HIS",
+      "ruleset": "SCN",
+      "ruleset_name": "Significant Change Notification",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Historical Notifications",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST keep 12 months of historical Significant Change Notifications available with their FedRAMP Certification Data.",
+      "artifacts": [
+        "Explanation of how FedRAMP can obtain this information."
+      ],
+      "artifact_count": 1,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Certification Data",
+        "Significant Change"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "SCN-CSO-HRM",
+      "ruleset": "SCN",
+      "ruleset_name": "Significant Change Notification",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Human and Machine-Readable Notifications",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST make ALL Significant Change Notifications and related audit records available in human-readable and JSON formats.",
+      "artifacts": [
+        "URL or explanation of how to request these materials.",
+        "Explanation of how the provider decides whether or not to share these materials or other related policies."
+      ],
+      "artifact_count": 2,
+      "schema_url": "https://fedramp.gov/schemas/fedramp-significant-change-notifications-schema-2026-06-24.json",
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Significant Change"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": true,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "SCN-CSO-INF",
+      "ruleset": "SCN",
+      "ruleset_name": "Significant Change Notification",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Required Information",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST include at least the following information in Significant Change Notifications:",
+      "artifacts": [
+        "A recent Significant Change Notification or sample Significant Change Notification"
+      ],
+      "artifact_count": 1,
+      "schema_url": "https://fedramp.gov/schemas/fedramp-significant-change-notifications-schema-2026-06-24.json",
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Significant Change",
+        "Validation",
+        "Verification",
+        "Vulnerability"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": true,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "SCN-CSO-MAR",
+      "ruleset": "SCN",
+      "ruleset_name": "Significant Change Notification",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Maintain Audit Records",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST maintain auditable records of the significant change evaluation activities required by SCN-CSO-EVA (Evaluate Changes) and make them available to FedRAMP as requested.",
+      "artifacts": [
+        "Explanation of how FedRAMP can obtain this information."
+      ],
+      "artifact_count": 1,
+      "schema_url": null,
+      "cadence": null,
+      "related": [
+        "SCN-CSO-EVA"
+      ],
+      "terms": [
+        "Certification Package",
+        "Significant Change"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "SCN-CSO-NOM",
+      "ruleset": "SCN",
+      "ruleset_name": "Significant Change Notification",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Notification Mechanisms",
+      "force": "MAY",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MAY notify necessary parties in a variety of ways as long as the mechanism for notification is clearly documented in the FedRAMP Certification Package and easily accessible.",
+      "artifacts": [
+        "Current list of available notification mechanisms"
+      ],
+      "artifact_count": 1,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Certification Package"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "SCN-RTR-NNR",
+      "ruleset": "SCN",
+      "ruleset_name": "Significant Change Notification",
+      "subset": "all",
+      "group": "RTR",
+      "name": "No Notification Requirements",
+      "force": "SHOULD NOT",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers SHOULD NOT make formal Significant Change Notifications for routine recurring changes; this type of change is exempted from notification requirements.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Incident",
+        "Regularly",
+        "Routine Recurring Change",
+        "Significant Change",
+        "Vulnerability"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "SCN-TRF-NAF",
+      "ruleset": "SCN",
+      "ruleset_name": "Significant Change Notification",
+      "subset": "all",
+      "group": "TRF",
+      "name": "Notification After Finishing",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST notify all necessary parties within 5 business days after finishing transformative changes, including updates to all previously sent information.",
+      "artifacts": [
+        "At least the most recent post deployment SCN notification for a transformative change including the date it was sent and the date the change was applied. Additional examples may be provided. If no transformative SCN notifications have been sent then this artifact is not required."
+      ],
+      "artifact_count": 1,
+      "schema_url": null,
+      "cadence": "5 bizdays",
+      "related": [],
+      "terms": [
+        "All Necessary Parties",
+        "Transformative Change"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": true,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "SCN-TRF-NAV",
+      "ruleset": "SCN",
+      "ruleset_name": "Significant Change Notification",
+      "subset": "all",
+      "group": "TRF",
+      "name": "Notification After Verification",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST notify all necessary parties within 5 business days after completing the verification, assessment, and/or validation of transformative changes, also including the following information:",
+      "artifacts": [
+        "At least the most recent after verification SCN notification for a transformative change including the date it was sent and the date the change was applied. Additional examples may be provided. If no transformative SCN notifications have been sent then this artifact is not required."
+      ],
+      "artifact_count": 1,
+      "schema_url": null,
+      "cadence": "5 bizdays",
+      "related": [],
+      "terms": [
+        "All Necessary Parties",
+        "Transformative Change",
+        "Validation",
+        "Verification",
+        "Vulnerability"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": true,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "SCN-TRF-NFP",
+      "ruleset": "SCN",
+      "ruleset_name": "Significant Change Notification",
+      "subset": "all",
+      "group": "TRF",
+      "name": "Notification of Final Plans",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST notify all necessary parties of final plans for transformative changes at least 10 business days before starting transformative changes, including updates to all previously sent information.",
+      "artifacts": [
+        "At least the most recent final SCN notification for a transformative change including the date it was sent and the date the change was applied. Additional examples may be provided. If no transformative SCN notifications have been sent then this artifact is not required."
+      ],
+      "artifact_count": 1,
+      "schema_url": null,
+      "cadence": "10 bizdays",
+      "related": [],
+      "terms": [
+        "All Necessary Parties",
+        "Transformative Change"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": true,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "SCN-TRF-NIP",
+      "ruleset": "SCN",
+      "ruleset_name": "Significant Change Notification",
+      "subset": "all",
+      "group": "TRF",
+      "name": "Notification of Initial Plans",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST notify all necessary parties of initial plans for transformative changes at least 30 business days before starting transformative changes, including a summary of any likely security impacts or changes in risk.",
+      "artifacts": [
+        "At least the most recent initial SCN notification for a transformative change including the date it was sent and the date the change was applied. Additional examples may be provided. If no transformative SCN notifications have been sent then this artifact is not required."
+      ],
+      "artifact_count": 1,
+      "schema_url": null,
+      "cadence": "30 bizdays",
+      "related": [],
+      "terms": [
+        "All Necessary Parties",
+        "Likely",
+        "Transformative Change"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": true,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "SCN-TRF-TPR",
+      "ruleset": "SCN",
+      "ruleset_name": "Significant Change Notification",
+      "subset": "all",
+      "group": "TRF",
+      "name": "Third-Party Review",
+      "force": "SHOULD",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers SHOULD engage a third-party assessor to review the scope and impact of the planned change before starting transformative changes if human validation is necessary; such reviews SHOULD be limited to security decisions that require human validation.",
+      "artifacts": [
+        "Third Party assesment report OR explanation why a third party assessor was not engaged"
+      ],
+      "artifact_count": 1,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Cloud Service Offering",
+        "Significant Change",
+        "Transformative Change",
+        "Validation"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "SCN-TRF-UPD",
+      "ruleset": "SCN",
+      "ruleset_name": "Significant Change Notification",
+      "subset": "all",
+      "group": "TRF",
+      "name": "Update Documentation",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST publish updated service documentation and other materials to reflect transformative changes within 30 business days after finishing transformative changes.",
+      "artifacts": [
+        "Date of the most recent transformative change and the date of the corresponding documentation update. If no documentation updates were required as the result of this change, explain how this was determined."
+      ],
+      "artifact_count": 1,
+      "schema_url": null,
+      "cadence": "30 bizdays",
+      "related": [],
+      "terms": [
+        "Certification Package",
+        "Transformative Change"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": true,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "SDR-CSO-FRR",
+      "ruleset": "SDR",
+      "ruleset_name": "Security Decision Record",
+      "subset": "all",
+      "group": "CSO",
+      "name": "FedRAMP Rules",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST supply a Security Decision Record, in both human-readable and JSON formats, that includes at least all of the following information for each applicable FedRAMP rule:",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": "https://fedramp.gov/schemas/fedramp-security-decision-record-schema-2026-06-24.json",
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Artifacts",
+        "Security Decision Record (SDR)",
+        "Validation",
+        "Verification"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": true,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "SDR-CSO-MTD",
+      "ruleset": "SDR",
+      "ruleset_name": "Security Decision Record",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Security Decision Record Metadata",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST also include the following basic metadata in their Security Decision Record:",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Security Decision Record (SDR)"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "SDR-CSX-KMT",
+      "ruleset": "SDR",
+      "ruleset_name": "Security Decision Record",
+      "subset": "20x",
+      "group": "CSX",
+      "name": "Key Security Indicator Metrics",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers with 20x Class C Certifications MUST also include historical metrics in their Security Decision Record, supplying at least the following information for each applicable Key Security Indicator:",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": "https://fedramp.gov/schemas/fedramp-security-decision-record-schema-2026-06-24.json",
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Security Decision Record (SDR)"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": true,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "SDR-CSX-KSI",
+      "ruleset": "SDR",
+      "ruleset_name": "Security Decision Record",
+      "subset": "20x",
+      "group": "CSX",
+      "name": "Key Security Indicators",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST also include short and simple high-level summaries of at least the following for each applicable Key Security Indicator:",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": "https://fedramp.gov/schemas/fedramp-security-decision-record-schema-2026-06-24.json",
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Persistently",
+        "Validation",
+        "Verification"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": true,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "VDR-CSO-ADT",
+      "ruleset": "VDR",
+      "ruleset_name": "Vulnerability Detection and Response",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Automate Detection",
+      "force": "SHOULD",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers SHOULD use automated services to improve and streamline vulnerability detection and response.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Vulnerability",
+        "Vulnerability Detection",
+        "Vulnerability Response"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "VDR-CSO-AKE",
+      "ruleset": "VDR",
+      "ruleset_name": "Vulnerability Detection and Response",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Avoid KEVs",
+      "force": "SHOULD NOT",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers SHOULD NOT deploy or otherwise activate new machine-based information resources with Known Exploited Vulnerabilities.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Information Resource",
+        "Known Exploited Vulnerability (KEV)",
+        "Machine-Based (Information Resources)",
+        "Vulnerability"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "VDR-CSO-DAC",
+      "ruleset": "VDR",
+      "ruleset_name": "Vulnerability Detection and Response",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Detect After Changes",
+      "force": "SHOULD",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers SHOULD automatically perform vulnerability detection on representative samples of new or significantly changed information resources.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Information Resource",
+        "Vulnerability",
+        "Vulnerability Detection"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "VDR-CSO-DET",
+      "ruleset": "VDR",
+      "ruleset_name": "Vulnerability Detection and Response",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Vulnerability Detection",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST systematically, persistently, and promptly discover and identify vulnerabilities within their cloud service offering using appropriate techniques such as assessment, scanning, threat intelligence, vulnerability disclosure mechanisms, bug bounties, penetration testing, incident response, automated control testing, supply chain monitoring, and other relevant capabilities; this process is called vulnerability detection. Vulnerability detection includes persistently verifying and validating that information resources and processes are operating as intended and documented for FedRAMP Practices.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Cloud Service Offering",
+        "FedRAMP Practices",
+        "Incident",
+        "Information Resource",
+        "Persistently",
+        "Promptly",
+        "Vulnerability",
+        "Vulnerability Detection",
+        "Vulnerability Response"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "VDR-CSO-DFR",
+      "ruleset": "VDR",
+      "ruleset_name": "Vulnerability Detection and Response",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Design For Resilience",
+      "force": "SHOULD",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers SHOULD make design and architecture decisions for their cloud service offering that mitigate the risk of vulnerabilities by default AND decrease the risk and complexity of vulnerability detection and response.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Cloud Service Offering",
+        "Vulnerability",
+        "Vulnerability Detection",
+        "Vulnerability Response"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "VDR-CSO-FAV",
+      "ruleset": "VDR",
+      "ruleset_name": "Vulnerability Detection and Response",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Failures Are Vulnerabilities",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST treat problems or failures with their vulnerability detection and response processes as vulnerabilities.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Vulnerability",
+        "Vulnerability Detection",
+        "Vulnerability Response"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "VDR-CSO-MSP",
+      "ruleset": "VDR",
+      "ruleset_name": "Vulnerability Detection and Response",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Maintain Security",
+      "force": "SHOULD NOT",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers SHOULD NOT weaken the security of information resources to facilitate vulnerability scanning, detection, or assessment activities.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Information Resource",
+        "Vulnerability",
+        "Vulnerability Detection"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "VDR-CSO-RES",
+      "ruleset": "VDR",
+      "ruleset_name": "Vulnerability Detection and Response",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Vulnerability Response",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST systematically, persistently, and promptly track, evaluate, monitor, mitigate, remediate, assess exploitation of, report, and otherwise manage all detected vulnerabilities within their cloud service offering; this process is called vulnerability response.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Cloud Service Offering",
+        "Fully Mitigated Vulnerability",
+        "Partially Mitigated Vulnerability",
+        "Persistently",
+        "Promptly",
+        "Remediated Vulnerability",
+        "Vulnerability",
+        "Vulnerability Detection",
+        "Vulnerability Response"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "VDR-CSO-SIR",
+      "ruleset": "VDR",
+      "ruleset_name": "Vulnerability Detection and Response",
+      "subset": "all",
+      "group": "CSO",
+      "name": "Sampling",
+      "force": "MAY",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MAY sample effectively identical information resources, especially machine-based information resources, when performing vulnerability detection UNLESS doing so would decrease the efficiency or effectiveness of vulnerability detection.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Information Resource",
+        "Machine-Based (Information Resources)",
+        "Vulnerability",
+        "Vulnerability Detection"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "VDR-TFR-KEV",
+      "ruleset": "VDR",
+      "ruleset_name": "Vulnerability Detection and Response",
+      "subset": "all",
+      "group": "TFR",
+      "name": "Remediate KEVs",
+      "force": "SHOULD",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers SHOULD remediate Known Exploited Vulnerabilities according to the due dates in the CISA Known Exploited Vulnerabilities Catalog (even if the vulnerability has been fully mitigated) as required by CISA Binding Operational Directive (BOD) 26-04 or any successor guidance from CISA.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Known Exploited Vulnerability (KEV)",
+        "Vulnerability"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "VDR-TFR-MVX",
+      "ruleset": "VDR",
+      "ruleset_name": "Vulnerability Detection and Response",
+      "subset": "20x",
+      "group": "TFR",
+      "name": "Persistent Machine Verification and Validation for 20x",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers of FedRAMP 20x Class C offerings MUST verify and validate the status of machine-based information resources at least once every 3 days.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": "3 days",
+      "related": [],
+      "terms": [
+        "Information Resource",
+        "Machine-Based (Information Resources)",
+        "Validation",
+        "Verification"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": true,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "VDR-TFR-NMV",
+      "ruleset": "VDR",
+      "ruleset_name": "Vulnerability Detection and Response",
+      "subset": "all",
+      "group": "TFR",
+      "name": "Non-Machine Verification and Validation",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST verify and validate the status of non-machine-based information resources at least once every 3 months.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": "3 months",
+      "related": [],
+      "terms": [
+        "Information Resource",
+        "Machine-Based (Information Resources)",
+        "Validation",
+        "Verification"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": true,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "VDR-TFR-PCD",
+      "ruleset": "VDR",
+      "ruleset_name": "Vulnerability Detection and Response",
+      "subset": "all",
+      "group": "TFR",
+      "name": "Persistently Complete Detection",
+      "force": "SHOULD",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers with Class C Certifications SHOULD persistently perform vulnerability detection on all information resources that are NOT likely to drift, at least once every month.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": "1 months",
+      "related": [],
+      "terms": [
+        "Drift",
+        "Information Resource",
+        "Likely",
+        "Persistently",
+        "Vulnerability",
+        "Vulnerability Detection"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": true,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "VDR-TFR-PDD",
+      "ruleset": "VDR",
+      "ruleset_name": "Vulnerability Detection and Response",
+      "subset": "all",
+      "group": "TFR",
+      "name": "Persistent Drift Detection",
+      "force": "SHOULD",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers with Class C Certifications SHOULD persistently perform vulnerability detection on all information resources that are likely to drift, at least once every 14 days.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": "14 days",
+      "related": [],
+      "terms": [
+        "Drift",
+        "Information Resource",
+        "Likely",
+        "Persistently",
+        "Vulnerability",
+        "Vulnerability Detection"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": true,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "VDR-TFR-PSD",
+      "ruleset": "VDR",
+      "ruleset_name": "Vulnerability Detection and Response",
+      "subset": "all",
+      "group": "TFR",
+      "name": "Persistent Sample Detection",
+      "force": "SHOULD",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers with Class C Certifications SHOULD persistently perform vulnerability detection on representative samples of similar machine-based information resources, at least once every 3 days.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": "3 days",
+      "related": [],
+      "terms": [
+        "Information Resource",
+        "Machine-Based (Information Resources)",
+        "Persistently",
+        "Vulnerability",
+        "Vulnerability Detection"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": true,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "VDR-TFR-PVR",
+      "ruleset": "VDR",
+      "ruleset_name": "Vulnerability Detection and Response",
+      "subset": "all",
+      "group": "TFR",
+      "name": "Mitigation and Remediation Expectations",
+      "force": "SHOULD",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers with Class C Certifications SHOULD partially mitigate vulnerabilities, fully mitigate vulnerabilities, or remediate vulnerabilities to a lower Potential Agency Impact N-rating within the timeframes from evaluation shown below, factoring for the current Potential Agency Impact N-rating as defined in VER-EVA-EPA (Estimate Potential Agency Impact), internet reachability, and likely exploitability:",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [
+        "VER-EVA-EPA"
+      ],
+      "terms": [
+        "Fully Mitigated Vulnerability",
+        "Likely",
+        "Partially Mitigated Vulnerability",
+        "Potential Agency Impact",
+        "Remediated Vulnerability",
+        "Vulnerability"
+      ],
+      "last_updated": "2026-07-01",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "VDR-TFR-RMN",
+      "ruleset": "VDR",
+      "ruleset_name": "Vulnerability Detection and Response",
+      "subset": "all",
+      "group": "TFR",
+      "name": "Remaining Vulnerabilities",
+      "force": "SHOULD",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers SHOULD mitigate or remediate remaining vulnerabilities during routine operations as determined necessary by the provider.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Vulnerability"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "VER-EVA-AIA",
+      "ruleset": "VER",
+      "ruleset_name": "Vulnerability Evaluation and Reporting",
+      "subset": "all",
+      "group": "EVA",
+      "name": "Assume It's Automatable",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST assume the exploitation of vulnerabilities can be automated UNLESS they have evidence proving otherwise.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Vulnerability"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "VER-EVA-EFA",
+      "ruleset": "VER",
+      "ruleset_name": "Vulnerability Evaluation and Reporting",
+      "subset": "all",
+      "group": "EVA",
+      "name": "Evaluation Factors",
+      "force": "SHOULD",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers SHOULD consider at least the following factors when considering the context of the cloud service offering to evaluate detected vulnerabilities:",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Cloud Service Offering",
+        "Fully Mitigated Vulnerability",
+        "Likely",
+        "Vulnerability",
+        "Vulnerability Detection"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "VER-EVA-EFP",
+      "ruleset": "VER",
+      "ruleset_name": "Vulnerability Evaluation and Reporting",
+      "subset": "all",
+      "group": "EVA",
+      "name": "Evaluate False Positives",
+      "force": "SHOULD",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers SHOULD evaluate detected vulnerabilities, considering the context of the cloud service offering, to determine if they are false positive vulnerabilities.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Cloud Service Offering",
+        "False Positive Vulnerability",
+        "Vulnerability",
+        "Vulnerability Detection"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "VER-EVA-EIR",
+      "ruleset": "VER",
+      "ruleset_name": "Vulnerability Evaluation and Reporting",
+      "subset": "all",
+      "group": "EVA",
+      "name": "Evaluate Internet-Reachability",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST evaluate detected vulnerabilities, considering the context of the cloud service offering, to determine if they are internet-reachable vulnerabilities.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Cloud Service Offering",
+        "FedRAMP Certified",
+        "Internet-Reachable Vulnerability (IRV)",
+        "Vulnerability",
+        "Vulnerability Detection"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "VER-EVA-ELX",
+      "ruleset": "VER",
+      "ruleset_name": "Vulnerability Evaluation and Reporting",
+      "subset": "all",
+      "group": "EVA",
+      "name": "Evaluate Exploitability",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST evaluate detected vulnerabilities, considering the context of the cloud service offering, to determine if they are likely exploitable vulnerabilities.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Cloud Service Offering",
+        "Likely",
+        "Likely Exploitable Vulnerability (LEV)",
+        "Regularly",
+        "Vulnerability",
+        "Vulnerability Detection"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "VER-EVA-EPA",
+      "ruleset": "VER",
+      "ruleset_name": "Vulnerability Evaluation and Reporting",
+      "subset": "all",
+      "group": "EVA",
+      "name": "Estimate Potential Agency Impact",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST evaluate detected vulnerabilities, considering the context of the cloud service offering, to estimate the potential agency impact of exploitation on government customers AND assign one of the following Potential Agency Impact N-ratings (PAIN):",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Cloud Service Offering",
+        "Debilitating Customer Effect",
+        "Disruptive Customer Effect",
+        "Minimal Customer Effect",
+        "Narrow Customer Effect",
+        "Potential Agency Impact",
+        "Vulnerability",
+        "Vulnerability Detection"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "VER-EVA-GRV",
+      "ruleset": "VER",
+      "ruleset_name": "Vulnerability Evaluation and Reporting",
+      "subset": "all",
+      "group": "EVA",
+      "name": "Group Vulnerabilities",
+      "force": "SHOULD",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers SHOULD evaluate detected vulnerabilities, considering the context of the cloud service offering, to identify logical groupings of affected information resources that may improve the efficiency and effectiveness of vulnerability response by consolidating further activity; FedRAMP Vulnerability Detection and Response rules are then applied to these consolidated groupings of vulnerabilities instead of each individual detected instance.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Cloud Service Offering",
+        "Information Resource",
+        "Vulnerability",
+        "Vulnerability Detection",
+        "Vulnerability Response"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "VER-RPT-AVI",
+      "ruleset": "VER",
+      "ruleset_name": "Vulnerability Evaluation and Reporting",
+      "subset": "all",
+      "group": "RPT",
+      "name": "Accepted Vulnerability Info",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST include the following information on accepted vulnerabilities when reporting on vulnerability detection and response activity:",
+      "artifacts": [
+        "A recent vulnerability report or a sample vulnerability report"
+      ],
+      "artifact_count": 1,
+      "schema_url": "https://fedramp.gov/schemas/fedramp-accepted-vulnerability-info-schema-2026-06-24.json",
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Accepted Vulnerability",
+        "Cloud Service Offering",
+        "Federal Customer Data",
+        "Internet-Reachable Vulnerability (IRV)",
+        "Likely",
+        "Likely Exploitable Vulnerability (LEV)",
+        "Potential Agency Impact",
+        "Responsibly",
+        "Vulnerability",
+        "Vulnerability Detection",
+        "Vulnerability Response"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": true,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "VER-RPT-HLO",
+      "ruleset": "VER",
+      "ruleset_name": "Vulnerability Evaluation and Reporting",
+      "subset": "all",
+      "group": "RPT",
+      "name": "High-Level Overviews",
+      "force": "SHOULD",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers SHOULD include high-level overviews of ALL vulnerability detection and response activities conducted during this period for the cloud service offering; this includes vulnerability disclosure programs, bug bounty programs, penetration testing, assessments, etc.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Cloud Service Offering",
+        "Vulnerability",
+        "Vulnerability Detection",
+        "Vulnerability Response"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "VER-RPT-NID",
+      "ruleset": "VER",
+      "ruleset_name": "Vulnerability Evaluation and Reporting",
+      "subset": "all",
+      "group": "RPT",
+      "name": "Responsible Disclosure",
+      "force": "MUST NOT",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST NOT irresponsibly disclose specific sensitive information about vulnerabilities that would likely lead to exploitation, but MUST disclose sufficient information for informed risk-based decision-making to all necessary parties.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "All Necessary Parties",
+        "Likely",
+        "Vulnerability"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "VER-RPT-PER",
+      "ruleset": "VER",
+      "ruleset_name": "Vulnerability Evaluation and Reporting",
+      "subset": "all",
+      "group": "RPT",
+      "name": "Persistent Reporting",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST report vulnerability detection and response activity (including persistent verification and validation) to all necessary parties persistently, summarizing ALL activity since the previous report; these reports are FedRAMP Certification Data and are subject to FedRAMP Certification Data Sharing rules.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": "https://fedramp.gov/schemas/fedramp-vulnerability-detail-report-schema-2026-06-24.json",
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "All Necessary Parties",
+        "Certification Data",
+        "Persistently",
+        "Validation",
+        "Verification",
+        "Vulnerability",
+        "Vulnerability Detection",
+        "Vulnerability Response"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": true,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "VER-RPT-RPD",
+      "ruleset": "VER",
+      "ruleset_name": "Vulnerability Evaluation and Reporting",
+      "subset": "all",
+      "group": "RPT",
+      "name": "Responsible Public Disclosure",
+      "force": "MAY",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MAY responsibly disclose vulnerabilities publicly or with other parties if the provider determines doing so will NOT likely lead to exploitation.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Likely",
+        "Responsibly",
+        "Vulnerability"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "VER-RPT-VDT",
+      "ruleset": "VER",
+      "ruleset_name": "Vulnerability Evaluation and Reporting",
+      "subset": "all",
+      "group": "RPT",
+      "name": "Vulnerability Details",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST include the following information (if applicable) on detected vulnerabilities when reporting on vulnerability detection and response activity, UNLESS it is an accepted vulnerability:",
+      "artifacts": [
+        "A recent vulnerability report or a sample vulnerability report"
+      ],
+      "artifact_count": 1,
+      "schema_url": "https://fedramp.gov/schemas/fedramp-vulnerability-detail-report-schema-2026-06-24.json",
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "Accepted Vulnerability",
+        "Cloud Service Offering",
+        "Federal Customer Data",
+        "Internet-Reachable Vulnerability (IRV)",
+        "Likely",
+        "Likely Exploitable Vulnerability (LEV)",
+        "Overdue Vulnerability",
+        "Potential Agency Impact",
+        "Responsibly",
+        "Vulnerability",
+        "Vulnerability Detection",
+        "Vulnerability Response"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": true,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "VER-TFR-EVU",
+      "ruleset": "VER",
+      "ruleset_name": "Vulnerability Evaluation and Reporting",
+      "subset": "all",
+      "group": "TFR",
+      "name": "Evaluate Vulnerabilities Quickly",
+      "force": "SHOULD",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers with Class C Certifications SHOULD evaluate ALL vulnerabilities as required by VER-EVA (Evaluation) within 5 days of detection.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": "5 days",
+      "related": [],
+      "terms": [
+        "Vulnerability",
+        "Vulnerability Detection"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": true,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "VER-TFR-IRI",
+      "ruleset": "VER",
+      "ruleset_name": "Vulnerability Evaluation and Reporting",
+      "subset": "all",
+      "group": "TFR",
+      "name": "Internet-Reachable Incidents",
+      "force": "SHOULD",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers with Class C Certifications SHOULD treat internet-reachable likely exploitable vulnerabilities where Potential Agency Impact N-rating > 3 as a FedRAMP Reportable Incident until they are partially mitigated vulnerabilities at N3 or below.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "FedRAMP Reportable Incident",
+        "Incident",
+        "Likely",
+        "Likely Exploitable Vulnerability (LEV)",
+        "Partially Mitigated Vulnerability",
+        "Potential Agency Impact",
+        "Vulnerability"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "VER-TFR-MAV",
+      "ruleset": "VER",
+      "ruleset_name": "Vulnerability Evaluation and Reporting",
+      "subset": "all",
+      "group": "TFR",
+      "name": "Mark Accepted Vulnerabilities",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST categorize any vulnerability that is not or will not be fully mitigated or remediated within 192 days of evaluation as an accepted vulnerability.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": "192 days",
+      "related": [],
+      "terms": [
+        "Accepted Vulnerability",
+        "Vulnerability"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": true,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "VER-TFR-MHR",
+      "ruleset": "VER",
+      "ruleset_name": "Vulnerability Evaluation and Reporting",
+      "subset": "all",
+      "group": "TFR",
+      "name": "Monthly Activity Report",
+      "force": "MUST",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers MUST report vulnerability detection and response activity to all necessary parties in a consistent format that is human readable at least monthly.",
+      "artifacts": [
+        "A recent vulnerability report or a sample vulnerability report"
+      ],
+      "artifact_count": 1,
+      "schema_url": null,
+      "cadence": "1 months",
+      "related": [],
+      "terms": [
+        "All Necessary Parties",
+        "Vulnerability",
+        "Vulnerability Detection",
+        "Vulnerability Response"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": true,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "VER-TFR-MRH",
+      "ruleset": "VER",
+      "ruleset_name": "Vulnerability Evaluation and Reporting",
+      "subset": "all",
+      "group": "TFR",
+      "name": "Historical Activity",
+      "force": "SHOULD",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers with Class C Certifications SHOULD make all recent historical vulnerability detection and response activity available in JSON format for automated retrieval by all necessary parties (e.g. using an API service or similar); this information SHOULD be updated persistently, at least once every 14 days.",
+      "artifacts": [
+        "URL and access instructions for historical vulnerability detection and response activity in machine readable format",
+        "or an explanation of why machine readable content is not being provided"
+      ],
+      "artifact_count": 2,
+      "schema_url": "https://fedramp.gov/schemas/fedramp-historical-ver-activity-schema-2026-06-24.json",
+      "cadence": "14 days",
+      "related": [],
+      "terms": [
+        "All Necessary Parties",
+        "Persistently",
+        "Vulnerability",
+        "Vulnerability Detection",
+        "Vulnerability Response"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": true,
+      "class_unspecified": false,
+      "classes_defined": []
+    },
+    {
+      "rule_id": "VER-TFR-NRI",
+      "ruleset": "VER",
+      "ruleset_name": "Vulnerability Evaluation and Reporting",
+      "subset": "all",
+      "group": "TFR",
+      "name": "Non-Internet-Reachable Incidents",
+      "force": "MAY",
+      "affects": [
+        "Providers"
+      ],
+      "statement": "Providers with Class C Certifications MAY treat likely exploitable vulnerabilities that are NOT internet-reachable where Potential Agency Impact N-rating = 5 as a FedRAMP Reportable Incident until they are partially mitigated vulnerabilities at N4 or below.",
+      "artifacts": [],
+      "artifact_count": 0,
+      "schema_url": null,
+      "cadence": null,
+      "related": [],
+      "terms": [
+        "FedRAMP Reportable Incident",
+        "Incident",
+        "Likely",
+        "Likely Exploitable Vulnerability (LEV)",
+        "Partially Mitigated Vulnerability",
+        "Potential Agency Impact",
+        "Vulnerability"
+      ],
+      "last_updated": "2026-06-24",
+      "automatable_hint": false,
+      "class_unspecified": false,
+      "classes_defined": []
+    }
+  ]
+}

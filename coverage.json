@@ -1,0 +1,2201 @@
+{
+  "generated": "2026-09-17T12:55:55Z",
+  "ruleset_version": "2026.09.13.02",
+  "schema_version": "1.1.1",
+  "track": "20x",
+  "class": "c",
+  "counts": {
+    "BLOCKING": 437
+  },
+  "rules_emitted": 1,
+  "rules_applicable": 168,
+  "ksis_emitted": 46,
+  "ksis_in_scope": 46,
+  "findings": [
+    {
+      "severity": "BLOCKING",
+      "target": "AFC-CSO-ACK",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "AFC-CSO-CRA",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "AFC-CSO-EMR",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "AFC-CSO-IMA",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "AFC-CSO-INB",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "AFC-CSO-NOC",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "AFC-CSO-RCV",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "CCM-OCR-AFS",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "CCM-OCR-AVL",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "CCM-OCR-FBM",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "CCM-OCR-LSI",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "CCM-OCR-NRD",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "CCM-OCR-RPS",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "CCM-OCR-SOR",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "CCM-QTR-ACT",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "CCM-QTR-MTG",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "CCM-QTR-NID",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "CCM-QTR-NRD",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "CCM-QTR-REG",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "CCM-QTR-RTP",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "CCM-QTR-RTR",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "CCM-QTR-SAR",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "CCM-QTR-SCR",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "CCM-QTR-SRR",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "CDS-CSO-AVR",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "CDS-CSO-CBF",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "CDS-CSO-FID",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "CDS-CSO-FRC",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "CDS-CSO-HAD",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "CDS-CSO-IRP",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "CDS-CSO-PSM",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "CDS-CSO-PUB",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "CDS-CSO-RIS",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "CDS-CSO-RPS",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "CDS-CSO-SVC",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "CDS-CSO-UTC",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "CDS-TRC-AAI",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "CDS-TRC-ACL",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "CDS-TRC-HMR",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "CDS-TRC-PAC",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "CDS-TRC-SSM",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "CDS-TRC-USH",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "CDS-UTC-AAD",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "CDS-UTC-AGA",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "CMU-CSO-CAT",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "CMU-CSO-CMD",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "CMU-CSO-UVM",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "CPO-CSO-MTD",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "CPO-CSO-OSA",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "CPO-CSO-OVR",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "CPO-CSX-CPM",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "FRC-APP-AFC",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "FRC-APP-FCP",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "FRC-APP-FIA",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "FRC-APP-MLF",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "FRC-APP-NTP",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "FRC-APP-USA",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "FRC-APS-ATO",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "FRC-CCL-DCC",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "FRC-CCL-DNP",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "FRC-CCL-UCC",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "FRC-CLA-ASF",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "FRC-CLA-EAM",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "FRC-CLA-IVV",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "FRC-CLA-MFR",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "FRC-CLA-OFR",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "FRC-CLA-RFR",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "FRC-CSO-FCP",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "FRC-CSO-JSN",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "FRC-CSO-MRA",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "FRC-CSO-PKG",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "FRC-CSO-POP",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "FRC-CSX-MAS",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "FRC-CSX-MOT",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "FRC-CSX-VVK",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "FRC-CSX-VVR",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "IEC-CSO-AIR",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "IEC-CSO-DPR",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "IEC-CSO-EFI",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "IEC-CSO-EFR",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "IEC-CSO-FIR",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "IEC-CSO-IIR",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "IEC-CSO-OIR",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "IVV-CSO-DUS",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "IVV-CSO-FIA",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "IVV-CSO-ICP",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "IVV-CSO-RAA",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "IVV-CSO-SEE",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "IVV-CSO-SEI",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "IVV-CSO-STE",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "IVV-CSO-USR",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "IVV-CSX-AIA",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "MAS-CSO-FLO",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "MAS-CSO-IIR",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "MAS-CSO-MDI",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "MAS-CSO-SUP",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "MAS-CSO-TPR",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "MKT-CSO-MLR",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "MKT-CSO-PML",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "MKT-IIP-AGU",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "MKT-IIP-DCP",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "MKT-IIP-DLA",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "SCG-CSO-AUP",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "SCG-CSO-PUB",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "SCG-CSO-RSC",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "SCG-CSO-SDF",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "SCG-ENH-API",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "SCG-ENH-CMP",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "SCG-ENH-EXP",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "SCG-ENH-MRG",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "SCG-ENH-VRH",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "SCN-ADP-NTF",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "SCN-CSO-ARI",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "SCN-CSO-EMG",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "SCN-CSO-EVA",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "SCN-CSO-HIS",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "SCN-CSO-HRM",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "SCN-CSO-INF",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "SCN-CSO-MAR",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "SCN-CSO-NOM",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "SCN-RTR-NNR",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "SCN-TRF-NAF",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "SCN-TRF-NAV",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "SCN-TRF-NFP",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "SCN-TRF-NIP",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "SCN-TRF-TPR",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "SCN-TRF-UPD",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "SDR-CSO-FRR",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "SDR-CSO-MTD",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "SDR-CSX-KMT",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "SDR-CSX-KSI",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "VDR-CSO-ADT",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "VDR-CSO-AKE",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "VDR-CSO-DAC",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "VDR-CSO-DET",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "VDR-CSO-DFR",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "VDR-CSO-FAV",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "VDR-CSO-MSP",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "VDR-CSO-RES",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "VDR-CSO-SIR",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "VDR-TFR-KEV",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "VDR-TFR-MVX",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "VDR-TFR-NMV",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "VDR-TFR-PCD",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "VDR-TFR-PDD",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "VDR-TFR-PSD",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "VDR-TFR-PVR",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "VDR-TFR-RMN",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "VER-EVA-AIA",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "VER-EVA-EFA",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "VER-EVA-EFP",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "VER-EVA-EIR",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "VER-EVA-ELX",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "VER-EVA-EPA",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "VER-EVA-GRV",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "VER-RPT-AVI",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "VER-RPT-HLO",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "VER-RPT-NID",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "VER-RPT-PER",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "VER-RPT-RPD",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "VER-RPT-VDT",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "VER-TFR-EVU",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "VER-TFR-IRI",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "VER-TFR-MAV",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "VER-TFR-MHR",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "VER-TFR-MRH",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "VER-TFR-NRI",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CED-RAT",
+      "message": "ksiImplementation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CED-RAT",
+      "message": "ksiValidation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CED-RAT",
+      "message": "ksiAssessment is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CED-RAT",
+      "message": "ksiTests is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CED-RAT",
+      "message": "ksiEvidence is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CED-RAT",
+      "message": "0 automated method(s); class c requires 2 per FRC-CSX-VVK"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CMT-LMC",
+      "message": "ksiImplementation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CMT-LMC",
+      "message": "ksiValidation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CMT-LMC",
+      "message": "ksiAssessment is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CMT-LMC",
+      "message": "ksiTests is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CMT-LMC",
+      "message": "ksiEvidence is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CMT-LMC",
+      "message": "0 automated method(s); class c requires 2 per FRC-CSX-VVK"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CMT-RMV",
+      "message": "ksiImplementation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CMT-RMV",
+      "message": "ksiValidation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CMT-RMV",
+      "message": "ksiAssessment is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CMT-RMV",
+      "message": "ksiTests is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CMT-RMV",
+      "message": "ksiEvidence is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CMT-RMV",
+      "message": "0 automated method(s); class c requires 2 per FRC-CSX-VVK"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CMT-RVP",
+      "message": "ksiImplementation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CMT-RVP",
+      "message": "ksiValidation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CMT-RVP",
+      "message": "ksiAssessment is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CMT-RVP",
+      "message": "ksiTests is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CMT-RVP",
+      "message": "ksiEvidence is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CMT-RVP",
+      "message": "0 automated method(s); class c requires 2 per FRC-CSX-VVK"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CMT-VTD",
+      "message": "ksiImplementation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CMT-VTD",
+      "message": "ksiValidation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CMT-VTD",
+      "message": "ksiAssessment is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CMT-VTD",
+      "message": "ksiTests is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CMT-VTD",
+      "message": "ksiEvidence is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CMT-VTD",
+      "message": "0 automated method(s); class c requires 2 per FRC-CSX-VVK"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CNA-EIS",
+      "message": "ksiImplementation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CNA-EIS",
+      "message": "ksiValidation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CNA-EIS",
+      "message": "ksiAssessment is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CNA-EIS",
+      "message": "ksiTests is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CNA-EIS",
+      "message": "ksiEvidence is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CNA-EIS",
+      "message": "0 automated method(s); class c requires 2 per FRC-CSX-VVK"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CNA-IBP",
+      "message": "ksiImplementation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CNA-IBP",
+      "message": "ksiValidation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CNA-IBP",
+      "message": "ksiAssessment is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CNA-IBP",
+      "message": "ksiTests is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CNA-IBP",
+      "message": "ksiEvidence is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CNA-IBP",
+      "message": "0 automated method(s); class c requires 2 per FRC-CSX-VVK"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CNA-MAT",
+      "message": "ksiImplementation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CNA-MAT",
+      "message": "ksiValidation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CNA-MAT",
+      "message": "ksiAssessment is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CNA-MAT",
+      "message": "ksiTests is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CNA-MAT",
+      "message": "ksiEvidence is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CNA-MAT",
+      "message": "0 automated method(s); class c requires 2 per FRC-CSX-VVK"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CNA-OFA",
+      "message": "ksiImplementation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CNA-OFA",
+      "message": "ksiValidation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CNA-OFA",
+      "message": "ksiAssessment is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CNA-OFA",
+      "message": "ksiTests is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CNA-OFA",
+      "message": "ksiEvidence is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CNA-OFA",
+      "message": "0 automated method(s); class c requires 2 per FRC-CSX-VVK"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CNA-RNT",
+      "message": "ksiImplementation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CNA-RNT",
+      "message": "ksiValidation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CNA-RNT",
+      "message": "ksiAssessment is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CNA-RNT",
+      "message": "ksiTests is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CNA-RNT",
+      "message": "ksiEvidence is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CNA-RNT",
+      "message": "0 automated method(s); class c requires 2 per FRC-CSX-VVK"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CNA-RVP",
+      "message": "ksiImplementation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CNA-RVP",
+      "message": "ksiValidation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CNA-RVP",
+      "message": "ksiAssessment is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CNA-RVP",
+      "message": "ksiTests is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CNA-RVP",
+      "message": "ksiEvidence is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CNA-RVP",
+      "message": "0 automated method(s); class c requires 2 per FRC-CSX-VVK"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CNA-ULN",
+      "message": "ksiImplementation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CNA-ULN",
+      "message": "ksiValidation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CNA-ULN",
+      "message": "ksiAssessment is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CNA-ULN",
+      "message": "ksiTests is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CNA-ULN",
+      "message": "ksiEvidence is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CNA-ULN",
+      "message": "0 automated method(s); class c requires 2 per FRC-CSX-VVK"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-IAM-AAM",
+      "message": "ksiImplementation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-IAM-AAM",
+      "message": "ksiValidation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-IAM-AAM",
+      "message": "ksiAssessment is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-IAM-AAM",
+      "message": "ksiTests is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-IAM-AAM",
+      "message": "ksiEvidence is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-IAM-AAM",
+      "message": "0 automated method(s); class c requires 2 per FRC-CSX-VVK"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-IAM-APM",
+      "message": "ksiImplementation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-IAM-APM",
+      "message": "ksiValidation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-IAM-APM",
+      "message": "ksiAssessment is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-IAM-APM",
+      "message": "ksiTests is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-IAM-APM",
+      "message": "ksiEvidence is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-IAM-APM",
+      "message": "0 automated method(s); class c requires 2 per FRC-CSX-VVK"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-IAM-ELP",
+      "message": "ksiImplementation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-IAM-ELP",
+      "message": "ksiValidation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-IAM-ELP",
+      "message": "ksiAssessment is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-IAM-ELP",
+      "message": "ksiTests is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-IAM-ELP",
+      "message": "ksiEvidence is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-IAM-ELP",
+      "message": "0 automated method(s); class c requires 2 per FRC-CSX-VVK"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-IAM-JIT",
+      "message": "ksiImplementation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-IAM-JIT",
+      "message": "ksiValidation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-IAM-JIT",
+      "message": "ksiAssessment is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-IAM-JIT",
+      "message": "ksiTests is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-IAM-JIT",
+      "message": "ksiEvidence is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-IAM-JIT",
+      "message": "0 automated method(s); class c requires 2 per FRC-CSX-VVK"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-IAM-SNU",
+      "message": "ksiImplementation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-IAM-SNU",
+      "message": "ksiValidation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-IAM-SNU",
+      "message": "ksiAssessment is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-IAM-SNU",
+      "message": "ksiTests is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-IAM-SNU",
+      "message": "ksiEvidence is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-IAM-SNU",
+      "message": "0 automated method(s); class c requires 2 per FRC-CSX-VVK"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-IAM-SUS",
+      "message": "ksiImplementation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-IAM-SUS",
+      "message": "ksiValidation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-IAM-SUS",
+      "message": "ksiAssessment is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-IAM-SUS",
+      "message": "ksiTests is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-IAM-SUS",
+      "message": "ksiEvidence is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-IAM-SUS",
+      "message": "0 automated method(s); class c requires 2 per FRC-CSX-VVK"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-INR-AAR",
+      "message": "ksiImplementation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-INR-AAR",
+      "message": "ksiValidation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-INR-AAR",
+      "message": "ksiAssessment is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-INR-AAR",
+      "message": "ksiTests is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-INR-AAR",
+      "message": "ksiEvidence is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-INR-AAR",
+      "message": "0 automated method(s); class c requires 2 per FRC-CSX-VVK"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-INR-RIR",
+      "message": "ksiImplementation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-INR-RIR",
+      "message": "ksiValidation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-INR-RIR",
+      "message": "ksiAssessment is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-INR-RIR",
+      "message": "ksiTests is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-INR-RIR",
+      "message": "ksiEvidence is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-INR-RIR",
+      "message": "0 automated method(s); class c requires 2 per FRC-CSX-VVK"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-INR-RPI",
+      "message": "ksiImplementation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-INR-RPI",
+      "message": "ksiValidation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-INR-RPI",
+      "message": "ksiAssessment is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-INR-RPI",
+      "message": "ksiTests is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-INR-RPI",
+      "message": "ksiEvidence is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-INR-RPI",
+      "message": "0 automated method(s); class c requires 2 per FRC-CSX-VVK"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-MLA-ALA",
+      "message": "ksiImplementation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-MLA-ALA",
+      "message": "ksiValidation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-MLA-ALA",
+      "message": "ksiAssessment is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-MLA-ALA",
+      "message": "ksiTests is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-MLA-ALA",
+      "message": "ksiEvidence is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-MLA-ALA",
+      "message": "0 automated method(s); class c requires 2 per FRC-CSX-VVK"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-MLA-EVC",
+      "message": "ksiImplementation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-MLA-EVC",
+      "message": "ksiValidation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-MLA-EVC",
+      "message": "ksiAssessment is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-MLA-EVC",
+      "message": "ksiTests is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-MLA-EVC",
+      "message": "ksiEvidence is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-MLA-EVC",
+      "message": "0 automated method(s); class c requires 2 per FRC-CSX-VVK"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-MLA-LET",
+      "message": "ksiImplementation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-MLA-LET",
+      "message": "ksiValidation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-MLA-LET",
+      "message": "ksiAssessment is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-MLA-LET",
+      "message": "ksiTests is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-MLA-LET",
+      "message": "ksiEvidence is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-MLA-LET",
+      "message": "0 automated method(s); class c requires 2 per FRC-CSX-VVK"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-MLA-OSM",
+      "message": "ksiImplementation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-MLA-OSM",
+      "message": "ksiValidation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-MLA-OSM",
+      "message": "ksiAssessment is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-MLA-OSM",
+      "message": "ksiTests is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-MLA-OSM",
+      "message": "ksiEvidence is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-MLA-OSM",
+      "message": "0 automated method(s); class c requires 2 per FRC-CSX-VVK"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-MLA-RVL",
+      "message": "ksiImplementation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-MLA-RVL",
+      "message": "ksiValidation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-MLA-RVL",
+      "message": "ksiAssessment is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-MLA-RVL",
+      "message": "ksiTests is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-MLA-RVL",
+      "message": "ksiEvidence is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-MLA-RVL",
+      "message": "0 automated method(s); class c requires 2 per FRC-CSX-VVK"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-PIY-GIV",
+      "message": "ksiImplementation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-PIY-GIV",
+      "message": "ksiValidation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-PIY-GIV",
+      "message": "ksiAssessment is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-PIY-GIV",
+      "message": "ksiTests is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-PIY-GIV",
+      "message": "ksiEvidence is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-PIY-GIV",
+      "message": "0 automated method(s); class c requires 2 per FRC-CSX-VVK"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-PIY-RES",
+      "message": "ksiImplementation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-PIY-RES",
+      "message": "ksiValidation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-PIY-RES",
+      "message": "ksiAssessment is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-PIY-RES",
+      "message": "ksiTests is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-PIY-RES",
+      "message": "ksiEvidence is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-PIY-RES",
+      "message": "0 automated method(s); class c requires 2 per FRC-CSX-VVK"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-PIY-RIS",
+      "message": "ksiImplementation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-PIY-RIS",
+      "message": "ksiValidation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-PIY-RIS",
+      "message": "ksiAssessment is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-PIY-RIS",
+      "message": "ksiTests is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-PIY-RIS",
+      "message": "ksiEvidence is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-PIY-RIS",
+      "message": "0 automated method(s); class c requires 2 per FRC-CSX-VVK"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-PIY-RSD",
+      "message": "ksiImplementation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-PIY-RSD",
+      "message": "ksiValidation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-PIY-RSD",
+      "message": "ksiAssessment is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-PIY-RSD",
+      "message": "ksiTests is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-PIY-RSD",
+      "message": "ksiEvidence is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-PIY-RSD",
+      "message": "0 automated method(s); class c requires 2 per FRC-CSX-VVK"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-PIY-RVD",
+      "message": "ksiImplementation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-PIY-RVD",
+      "message": "ksiValidation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-PIY-RVD",
+      "message": "ksiAssessment is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-PIY-RVD",
+      "message": "ksiTests is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-PIY-RVD",
+      "message": "ksiEvidence is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-PIY-RVD",
+      "message": "0 automated method(s); class c requires 2 per FRC-CSX-VVK"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-RPL-ABO",
+      "message": "ksiImplementation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-RPL-ABO",
+      "message": "ksiValidation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-RPL-ABO",
+      "message": "ksiAssessment is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-RPL-ABO",
+      "message": "ksiTests is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-RPL-ABO",
+      "message": "ksiEvidence is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-RPL-ABO",
+      "message": "0 automated method(s); class c requires 2 per FRC-CSX-VVK"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-RPL-ARP",
+      "message": "ksiImplementation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-RPL-ARP",
+      "message": "ksiValidation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-RPL-ARP",
+      "message": "ksiAssessment is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-RPL-ARP",
+      "message": "ksiTests is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-RPL-ARP",
+      "message": "ksiEvidence is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-RPL-ARP",
+      "message": "0 automated method(s); class c requires 2 per FRC-CSX-VVK"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-RPL-RRO",
+      "message": "ksiImplementation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-RPL-RRO",
+      "message": "ksiValidation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-RPL-RRO",
+      "message": "ksiAssessment is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-RPL-RRO",
+      "message": "ksiTests is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-RPL-RRO",
+      "message": "ksiEvidence is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-RPL-RRO",
+      "message": "0 automated method(s); class c requires 2 per FRC-CSX-VVK"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-RPL-TRC",
+      "message": "ksiImplementation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-RPL-TRC",
+      "message": "ksiValidation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-RPL-TRC",
+      "message": "ksiAssessment is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-RPL-TRC",
+      "message": "ksiTests is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-RPL-TRC",
+      "message": "ksiEvidence is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-RPL-TRC",
+      "message": "0 automated method(s); class c requires 2 per FRC-CSX-VVK"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SCR-MIT",
+      "message": "ksiImplementation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SCR-MIT",
+      "message": "ksiValidation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SCR-MIT",
+      "message": "ksiAssessment is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SCR-MIT",
+      "message": "ksiTests is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SCR-MIT",
+      "message": "ksiEvidence is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SCR-MIT",
+      "message": "0 automated method(s); class c requires 2 per FRC-CSX-VVK"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SCR-MON",
+      "message": "ksiImplementation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SCR-MON",
+      "message": "ksiValidation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SCR-MON",
+      "message": "ksiAssessment is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SCR-MON",
+      "message": "ksiTests is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SCR-MON",
+      "message": "ksiEvidence is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SCR-MON",
+      "message": "0 automated method(s); class c requires 2 per FRC-CSX-VVK"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SVC-ACM",
+      "message": "ksiImplementation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SVC-ACM",
+      "message": "ksiValidation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SVC-ACM",
+      "message": "ksiAssessment is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SVC-ACM",
+      "message": "ksiTests is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SVC-ACM",
+      "message": "ksiEvidence is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SVC-ACM",
+      "message": "0 automated method(s); class c requires 2 per FRC-CSX-VVK"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SVC-ASM",
+      "message": "ksiImplementation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SVC-ASM",
+      "message": "ksiValidation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SVC-ASM",
+      "message": "ksiAssessment is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SVC-ASM",
+      "message": "ksiTests is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SVC-ASM",
+      "message": "ksiEvidence is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SVC-ASM",
+      "message": "0 automated method(s); class c requires 2 per FRC-CSX-VVK"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SVC-EIS",
+      "message": "ksiImplementation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SVC-EIS",
+      "message": "ksiValidation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SVC-EIS",
+      "message": "ksiAssessment is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SVC-EIS",
+      "message": "ksiTests is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SVC-EIS",
+      "message": "ksiEvidence is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SVC-EIS",
+      "message": "0 automated method(s); class c requires 2 per FRC-CSX-VVK"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SVC-PRR",
+      "message": "ksiImplementation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SVC-PRR",
+      "message": "ksiValidation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SVC-PRR",
+      "message": "ksiAssessment is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SVC-PRR",
+      "message": "ksiTests is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SVC-PRR",
+      "message": "ksiEvidence is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SVC-PRR",
+      "message": "0 automated method(s); class c requires 2 per FRC-CSX-VVK"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SVC-RUD",
+      "message": "ksiImplementation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SVC-RUD",
+      "message": "ksiValidation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SVC-RUD",
+      "message": "ksiAssessment is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SVC-RUD",
+      "message": "ksiTests is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SVC-RUD",
+      "message": "ksiEvidence is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SVC-RUD",
+      "message": "0 automated method(s); class c requires 2 per FRC-CSX-VVK"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SVC-SIN",
+      "message": "ksiImplementation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SVC-SIN",
+      "message": "ksiValidation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SVC-SIN",
+      "message": "ksiAssessment is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SVC-SIN",
+      "message": "ksiTests is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SVC-SIN",
+      "message": "ksiEvidence is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SVC-SIN",
+      "message": "0 automated method(s); class c requires 2 per FRC-CSX-VVK"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SVC-VCM",
+      "message": "ksiImplementation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SVC-VCM",
+      "message": "ksiValidation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SVC-VCM",
+      "message": "ksiAssessment is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SVC-VCM",
+      "message": "ksiTests is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SVC-VCM",
+      "message": "ksiEvidence is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SVC-VCM",
+      "message": "0 automated method(s); class c requires 2 per FRC-CSX-VVK"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SVC-VRI",
+      "message": "ksiImplementation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SVC-VRI",
+      "message": "ksiValidation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SVC-VRI",
+      "message": "ksiAssessment is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SVC-VRI",
+      "message": "ksiTests is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SVC-VRI",
+      "message": "ksiEvidence is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-SVC-VRI",
+      "message": "0 automated method(s); class c requires 2 per FRC-CSX-VVK"
+    }
+  ]
+}

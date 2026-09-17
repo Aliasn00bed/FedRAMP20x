@@ -1,0 +1,461 @@
+{
+  "certificationPackageOverviewUri": "https://trust.example.com/cpo.json",
+  "metadata": {
+    "version": "0.1.0",
+    "lastUpdated": "2026-09-17T12:55:55Z",
+    "updateSource": "sdr_compile.py"
+  },
+  "fedRampRequirements": [
+    {
+      "frrID": "AFC-CSO-TFG",
+      "frrImplementationStatus": "Implemented",
+      "frrImplementation": [
+        "Mail transport rules on the FedRAMP Security Inbox explicitly allowlist `@fedramp.gov` and `@gsa.gov` senders and exempt them from quarantine and bulk filtering."
+      ],
+      "frrValidation": [
+        "A scheduled job asserts the allowlist entries and exemption flags every 24h and pages the on-call if drift is detected."
+      ],
+      "frrAssessment": [
+        "3PAO confirmed allowlist configuration and reviewed 90 days of assertion logs."
+      ]
+    }
+  ],
+  "keySecurityIndicators": [
+    {
+      "ksiId": "KSI-CED-RAT",
+      "ksiImplementation": [],
+      "ksiValidation": [],
+      "ksiAssessment": [],
+      "ksiTests": [],
+      "ksiEvidence": [],
+      "ksiImplementationStatus": "Not Implemented"
+    },
+    {
+      "ksiId": "KSI-CMT-LMC",
+      "ksiImplementation": [],
+      "ksiValidation": [],
+      "ksiAssessment": [],
+      "ksiTests": [],
+      "ksiEvidence": [],
+      "ksiImplementationStatus": "Not Implemented"
+    },
+    {
+      "ksiId": "KSI-CMT-RMV",
+      "ksiImplementation": [],
+      "ksiValidation": [],
+      "ksiAssessment": [],
+      "ksiTests": [],
+      "ksiEvidence": [],
+      "ksiImplementationStatus": "Not Implemented"
+    },
+    {
+      "ksiId": "KSI-CMT-RVP",
+      "ksiImplementation": [],
+      "ksiValidation": [],
+      "ksiAssessment": [],
+      "ksiTests": [],
+      "ksiEvidence": [],
+      "ksiImplementationStatus": "Not Implemented"
+    },
+    {
+      "ksiId": "KSI-CMT-VTD",
+      "ksiImplementation": [],
+      "ksiValidation": [],
+      "ksiAssessment": [],
+      "ksiTests": [],
+      "ksiEvidence": [],
+      "ksiImplementationStatus": "Not Implemented"
+    },
+    {
+      "ksiId": "KSI-CNA-DFP",
+      "ksiImplementation": [
+        "IAM roles and security groups are declared in Terraform; no console-created principals are permitted."
+      ],
+      "ksiValidation": [
+        "Plan-time policy checks reject privilege grants outside the declared set; a daily reconciler diffs live state against the declared baseline."
+      ],
+      "ksiAssessment": [
+        "3PAO independently re-ran the drift reconciler against a read-only role and confirmed parity."
+      ],
+      "ksiTests": [
+        "terraform-policy-gate",
+        "iam-drift-reconciler"
+      ],
+      "ksiEvidence": [
+        {
+          "evidenceType": "Report",
+          "evidenceDescription": "Policy gate results for last 30 merges",
+          "evidenceLocation": "https://trust.example.com/ev/tf-gate-2026-09-17.json",
+          "lastUpdated": "2026-09-17"
+        },
+        {
+          "evidenceType": "Log",
+          "evidenceDescription": "Daily IAM reconciliation, 0 undeclared principals",
+          "evidenceText": "2026-09-17T03:00Z reconcile ok declared=412 live=412",
+          "lastUpdated": "2026-09-17"
+        }
+      ],
+      "ksiImplementationStatus": "Implemented"
+    },
+    {
+      "ksiId": "KSI-CNA-EIS",
+      "ksiImplementation": [],
+      "ksiValidation": [],
+      "ksiAssessment": [],
+      "ksiTests": [],
+      "ksiEvidence": [],
+      "ksiImplementationStatus": "Not Implemented"
+    },
+    {
+      "ksiId": "KSI-CNA-IBP",
+      "ksiImplementation": [],
+      "ksiValidation": [],
+      "ksiAssessment": [],
+      "ksiTests": [],
+      "ksiEvidence": [],
+      "ksiImplementationStatus": "Not Implemented"
+    },
+    {
+      "ksiId": "KSI-CNA-MAT",
+      "ksiImplementation": [],
+      "ksiValidation": [],
+      "ksiAssessment": [],
+      "ksiTests": [],
+      "ksiEvidence": [],
+      "ksiImplementationStatus": "Not Implemented"
+    },
+    {
+      "ksiId": "KSI-CNA-OFA",
+      "ksiImplementation": [],
+      "ksiValidation": [],
+      "ksiAssessment": [],
+      "ksiTests": [],
+      "ksiEvidence": [],
+      "ksiImplementationStatus": "Not Implemented"
+    },
+    {
+      "ksiId": "KSI-CNA-RNT",
+      "ksiImplementation": [],
+      "ksiValidation": [],
+      "ksiAssessment": [],
+      "ksiTests": [],
+      "ksiEvidence": [],
+      "ksiImplementationStatus": "Not Implemented"
+    },
+    {
+      "ksiId": "KSI-CNA-RVP",
+      "ksiImplementation": [],
+      "ksiValidation": [],
+      "ksiAssessment": [],
+      "ksiTests": [],
+      "ksiEvidence": [],
+      "ksiImplementationStatus": "Not Implemented"
+    },
+    {
+      "ksiId": "KSI-CNA-ULN",
+      "ksiImplementation": [],
+      "ksiValidation": [],
+      "ksiAssessment": [],
+      "ksiTests": [],
+      "ksiEvidence": [],
+      "ksiImplementationStatus": "Not Implemented"
+    },
+    {
+      "ksiId": "KSI-IAM-AAM",
+      "ksiImplementation": [],
+      "ksiValidation": [],
+      "ksiAssessment": [],
+      "ksiTests": [],
+      "ksiEvidence": [],
+      "ksiImplementationStatus": "Not Implemented"
+    },
+    {
+      "ksiId": "KSI-IAM-APM",
+      "ksiImplementation": [],
+      "ksiValidation": [],
+      "ksiAssessment": [],
+      "ksiTests": [],
+      "ksiEvidence": [],
+      "ksiImplementationStatus": "Not Implemented"
+    },
+    {
+      "ksiId": "KSI-IAM-ELP",
+      "ksiImplementation": [],
+      "ksiValidation": [],
+      "ksiAssessment": [],
+      "ksiTests": [],
+      "ksiEvidence": [],
+      "ksiImplementationStatus": "Not Implemented"
+    },
+    {
+      "ksiId": "KSI-IAM-JIT",
+      "ksiImplementation": [],
+      "ksiValidation": [],
+      "ksiAssessment": [],
+      "ksiTests": [],
+      "ksiEvidence": [],
+      "ksiImplementationStatus": "Not Implemented"
+    },
+    {
+      "ksiId": "KSI-IAM-SNU",
+      "ksiImplementation": [],
+      "ksiValidation": [],
+      "ksiAssessment": [],
+      "ksiTests": [],
+      "ksiEvidence": [],
+      "ksiImplementationStatus": "Not Implemented"
+    },
+    {
+      "ksiId": "KSI-IAM-SUS",
+      "ksiImplementation": [],
+      "ksiValidation": [],
+      "ksiAssessment": [],
+      "ksiTests": [],
+      "ksiEvidence": [],
+      "ksiImplementationStatus": "Not Implemented"
+    },
+    {
+      "ksiId": "KSI-INR-AAR",
+      "ksiImplementation": [],
+      "ksiValidation": [],
+      "ksiAssessment": [],
+      "ksiTests": [],
+      "ksiEvidence": [],
+      "ksiImplementationStatus": "Not Implemented"
+    },
+    {
+      "ksiId": "KSI-INR-RIR",
+      "ksiImplementation": [],
+      "ksiValidation": [],
+      "ksiAssessment": [],
+      "ksiTests": [],
+      "ksiEvidence": [],
+      "ksiImplementationStatus": "Not Implemented"
+    },
+    {
+      "ksiId": "KSI-INR-RPI",
+      "ksiImplementation": [],
+      "ksiValidation": [],
+      "ksiAssessment": [],
+      "ksiTests": [],
+      "ksiEvidence": [],
+      "ksiImplementationStatus": "Not Implemented"
+    },
+    {
+      "ksiId": "KSI-MLA-ALA",
+      "ksiImplementation": [],
+      "ksiValidation": [],
+      "ksiAssessment": [],
+      "ksiTests": [],
+      "ksiEvidence": [],
+      "ksiImplementationStatus": "Not Implemented"
+    },
+    {
+      "ksiId": "KSI-MLA-EVC",
+      "ksiImplementation": [],
+      "ksiValidation": [],
+      "ksiAssessment": [],
+      "ksiTests": [],
+      "ksiEvidence": [],
+      "ksiImplementationStatus": "Not Implemented"
+    },
+    {
+      "ksiId": "KSI-MLA-LET",
+      "ksiImplementation": [],
+      "ksiValidation": [],
+      "ksiAssessment": [],
+      "ksiTests": [],
+      "ksiEvidence": [],
+      "ksiImplementationStatus": "Not Implemented"
+    },
+    {
+      "ksiId": "KSI-MLA-OSM",
+      "ksiImplementation": [],
+      "ksiValidation": [],
+      "ksiAssessment": [],
+      "ksiTests": [],
+      "ksiEvidence": [],
+      "ksiImplementationStatus": "Not Implemented"
+    },
+    {
+      "ksiId": "KSI-MLA-RVL",
+      "ksiImplementation": [],
+      "ksiValidation": [],
+      "ksiAssessment": [],
+      "ksiTests": [],
+      "ksiEvidence": [],
+      "ksiImplementationStatus": "Not Implemented"
+    },
+    {
+      "ksiId": "KSI-PIY-GIV",
+      "ksiImplementation": [],
+      "ksiValidation": [],
+      "ksiAssessment": [],
+      "ksiTests": [],
+      "ksiEvidence": [],
+      "ksiImplementationStatus": "Not Implemented"
+    },
+    {
+      "ksiId": "KSI-PIY-RES",
+      "ksiImplementation": [],
+      "ksiValidation": [],
+      "ksiAssessment": [],
+      "ksiTests": [],
+      "ksiEvidence": [],
+      "ksiImplementationStatus": "Not Implemented"
+    },
+    {
+      "ksiId": "KSI-PIY-RIS",
+      "ksiImplementation": [],
+      "ksiValidation": [],
+      "ksiAssessment": [],
+      "ksiTests": [],
+      "ksiEvidence": [],
+      "ksiImplementationStatus": "Not Implemented"
+    },
+    {
+      "ksiId": "KSI-PIY-RSD",
+      "ksiImplementation": [],
+      "ksiValidation": [],
+      "ksiAssessment": [],
+      "ksiTests": [],
+      "ksiEvidence": [],
+      "ksiImplementationStatus": "Not Implemented"
+    },
+    {
+      "ksiId": "KSI-PIY-RVD",
+      "ksiImplementation": [],
+      "ksiValidation": [],
+      "ksiAssessment": [],
+      "ksiTests": [],
+      "ksiEvidence": [],
+      "ksiImplementationStatus": "Not Implemented"
+    },
+    {
+      "ksiId": "KSI-RPL-ABO",
+      "ksiImplementation": [],
+      "ksiValidation": [],
+      "ksiAssessment": [],
+      "ksiTests": [],
+      "ksiEvidence": [],
+      "ksiImplementationStatus": "Not Implemented"
+    },
+    {
+      "ksiId": "KSI-RPL-ARP",
+      "ksiImplementation": [],
+      "ksiValidation": [],
+      "ksiAssessment": [],
+      "ksiTests": [],
+      "ksiEvidence": [],
+      "ksiImplementationStatus": "Not Implemented"
+    },
+    {
+      "ksiId": "KSI-RPL-RRO",
+      "ksiImplementation": [],
+      "ksiValidation": [],
+      "ksiAssessment": [],
+      "ksiTests": [],
+      "ksiEvidence": [],
+      "ksiImplementationStatus": "Not Implemented"
+    },
+    {
+      "ksiId": "KSI-RPL-TRC",
+      "ksiImplementation": [],
+      "ksiValidation": [],
+      "ksiAssessment": [],
+      "ksiTests": [],
+      "ksiEvidence": [],
+      "ksiImplementationStatus": "Not Implemented"
+    },
+    {
+      "ksiId": "KSI-SCR-MIT",
+      "ksiImplementation": [],
+      "ksiValidation": [],
+      "ksiAssessment": [],
+      "ksiTests": [],
+      "ksiEvidence": [],
+      "ksiImplementationStatus": "Not Implemented"
+    },
+    {
+      "ksiId": "KSI-SCR-MON",
+      "ksiImplementation": [],
+      "ksiValidation": [],
+      "ksiAssessment": [],
+      "ksiTests": [],
+      "ksiEvidence": [],
+      "ksiImplementationStatus": "Not Implemented"
+    },
+    {
+      "ksiId": "KSI-SVC-ACM",
+      "ksiImplementation": [],
+      "ksiValidation": [],
+      "ksiAssessment": [],
+      "ksiTests": [],
+      "ksiEvidence": [],
+      "ksiImplementationStatus": "Not Implemented"
+    },
+    {
+      "ksiId": "KSI-SVC-ASM",
+      "ksiImplementation": [],
+      "ksiValidation": [],
+      "ksiAssessment": [],
+      "ksiTests": [],
+      "ksiEvidence": [],
+      "ksiImplementationStatus": "Not Implemented"
+    },
+    {
+      "ksiId": "KSI-SVC-EIS",
+      "ksiImplementation": [],
+      "ksiValidation": [],
+      "ksiAssessment": [],
+      "ksiTests": [],
+      "ksiEvidence": [],
+      "ksiImplementationStatus": "Not Implemented"
+    },
+    {
+      "ksiId": "KSI-SVC-PRR",
+      "ksiImplementation": [],
+      "ksiValidation": [],
+      "ksiAssessment": [],
+      "ksiTests": [],
+      "ksiEvidence": [],
+      "ksiImplementationStatus": "Not Implemented"
+    },
+    {
+      "ksiId": "KSI-SVC-RUD",
+      "ksiImplementation": [],
+      "ksiValidation": [],
+      "ksiAssessment": [],
+      "ksiTests": [],
+      "ksiEvidence": [],
+      "ksiImplementationStatus": "Not Implemented"
+    },
+    {
+      "ksiId": "KSI-SVC-SIN",
+      "ksiImplementation": [],
+      "ksiValidation": [],
+      "ksiAssessment": [],
+      "ksiTests": [],
+      "ksiEvidence": [],
+      "ksiImplementationStatus": "Not Implemented"
+    },
+    {
+      "ksiId": "KSI-SVC-VCM",
+      "ksiImplementation": [],
+      "ksiValidation": [],
+      "ksiAssessment": [],
+      "ksiTests": [],
+      "ksiEvidence": [],
+      "ksiImplementationStatus": "Not Implemented"
+    },
+    {
+      "ksiId": "KSI-SVC-VRI",
+      "ksiImplementation": [],
+      "ksiValidation": [],
+      "ksiAssessment": [],
+      "ksiTests": [],
+      "ksiEvidence": [],
+      "ksiImplementationStatus": "Not Implemented"
+    }
+  ]
+}

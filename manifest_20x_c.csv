@@ -1,0 +1,194 @@
+rule_id,ruleset,name,force,cadence,schema_url,artifact
+AFC-CSO-INB,AFC,Maintain a FedRAMP Security Inbox,MUST,,,Email address to receive messages from FedRAMP
+AFC-CSO-NOC,AFC,Notification of Changes,MUST,,,"Process, manual or automated, to notify FedRAMP of changes in the FedRAMP Security Inbox"
+AFC-CSO-TFG,AFC,Trust @fedramp.gov and @gsa.gov,MUST,,,Configuration settings for FSI mailbox
+AFC-CSO-TFG,AFC,Trust @fedramp.gov and @gsa.gov,MUST,,,Automated validation to check FSI mailbox configuration
+AFC-CSO-RCV,AFC,Receive Email Without Disruption,MUST,,,(default artifacts apply)
+AFC-CSO-CRA,AFC,Complete Required Actions,MUST,,,(default artifacts apply)
+AFC-CSO-EMR,AFC,Emergency Message Routing,MUST,,,Configuration settings for FSI mailbox
+AFC-CSO-EMR,AFC,Emergency Message Routing,MUST,,,Automated validation to check FSI mailbox configuration
+AFC-CSO-IMA,AFC,Important Message Actions,SHOULD,,,(default artifacts apply)
+AFC-CSO-ACK,AFC,Acknowledge Receipt,SHOULD,,,(default artifacts apply)
+CCM-OCR-AVL,CCM,Report Availability,MUST,3 months,https://fedramp.gov/schemas/fedramp-ongoing-certification-report-schema-2026-06-24.json,"Most recent Ongoing Certification Report. If the report is not available, the provider MUST provide a sample report that includes all required information."
+CCM-OCR-AVL,CCM,Report Availability,MUST,3 months,https://fedramp.gov/schemas/fedramp-ongoing-certification-report-schema-2026-06-24.json,How the report will be delivered
+CCM-OCR-NRD,CCM,Next Report Date,MUST,,,(default artifacts apply)
+CCM-OCR-FBM,CCM,Feedback Mechanism,MUST,,,How to access the feedback mechanism.
+CCM-OCR-AFS,CCM,Anonymized Feedback Summary,MUST,,,How the summary will be delivered
+CCM-OCR-LSI,CCM,Limit Sensitive Information,MUST NOT,,,(default artifacts apply)
+CCM-OCR-SOR,CCM,Spread Out Reports,SHOULD,,,(default artifacts apply)
+CCM-OCR-RPS,CCM,Responsible Public Certification Report Sharing,MAY,,,(default artifacts apply)
+CCM-QTR-MTG,CCM,Quarterly Review Meeting,MUST,3 months,,selected ordinal recurrence for the Ongoing Certification Report cycle.
+CCM-QTR-REG,CCM,Meeting Registration Info,MUST,,,URL to the registration page or calendar file.
+CCM-QTR-NRD,CCM,Next Review Date,MUST,,,(default artifacts apply)
+CCM-QTR-NID,CCM,No Irresponsible Disclosure,MUST NOT,,,(default artifacts apply)
+CCM-QTR-SAR,CCM,Schedule Around Reports,SHOULD,3-10 bizdays,,(default artifacts apply)
+CCM-QTR-ACT,CCM,Additional Content,SHOULD,,,(default artifacts apply)
+CCM-QTR-RTR,CCM,Record/Transcribe Reviews,SHOULD,,,(default artifacts apply)
+CCM-QTR-RTP,CCM,Restrict Third Parties,SHOULD NOT,,,(default artifacts apply)
+CCM-QTR-SRR,CCM,Share Recordings Responsibly,MAY,,,(default artifacts apply)
+CCM-QTR-SCR,CCM,Share Content Responsibly,MAY,,,(default artifacts apply)
+CDS-CSO-PUB,CDS,Public Information,MUST,,https://fedramp.gov/schemas/fedramp-certification-package-overview-schema-2026-06-24.json,URL to the human-readable data.
+CDS-CSO-PUB,CDS,Public Information,MUST,,https://fedramp.gov/schemas/fedramp-certification-package-overview-schema-2026-06-24.json,URL to the machine-readable data.
+CDS-CSO-SVC,CDS,Public Service List,MUST,,https://fedramp.gov/schemas/fedramp-certification-package-overview-schema-2026-06-24.json,URL to the human-readable data.
+CDS-CSO-SVC,CDS,Public Service List,MUST,,https://fedramp.gov/schemas/fedramp-certification-package-overview-schema-2026-06-24.json,URL to the machine-readable data (if applicable).
+CDS-CSO-FID,CDS,Always Include FedRAMP ID,MUST,,,(default artifacts apply)
+CDS-CSO-FRC,CDS,FedRAMP Certification Reports,MUST,2 weeks,,(default artifacts apply)
+CDS-CSO-AVR,CDS,Availability Reporting,MUST,,,(default artifacts apply)
+CDS-CSO-UTC,CDS,Use Trust Centers,MUST,,https://fedramp.gov/schemas/fedramp-certification-package-overview-schema-2026-06-24.json,(default artifacts apply)
+CDS-CSO-CBF,CDS,Consistency Between Formats,MUST,,,(default artifacts apply)
+CDS-CSO-RIS,CDS,Responsible Information Sharing,MUST,,,(default artifacts apply)
+CDS-CSO-IRP,CDS,Include Relevant Policies,MUST,,,Explanation of how to access this information.
+CDS-CSO-HAD,CDS,Historical FedRAMP Certification Data,MUST,,,Explanation of how to access this information.
+CDS-CSO-PSM,CDS,Per-Service Certification Materials,MAY,,,"Explanation of the supplied materials, including how to access and use them."
+CDS-CSO-RPS,CDS,Responsible Public Package Sharing,MAY,,,Explanation of if and how this information is shared with other parties.
+CDS-TRC-USH,CDS,Uninterrupted Sharing,MUST,,,(default artifacts apply)
+CDS-TRC-PAC,CDS,Programmatic Access,MUST,,,URL to the documentation for programmatic access.
+CDS-TRC-AAI,CDS,Agency Access Inventory,MUST,,,Explanation of how FedRAMP can obtain this information.
+CDS-TRC-ACL,CDS,Access Logging,MUST,,,Explanation of how the appropriate parties can obtain this log information.
+CDS-TRC-HMR,CDS,Human and Machine-Readable Certification Data,SHOULD,,,(default artifacts apply)
+CDS-TRC-SSM,CDS,Self-Service Access Management,SHOULD,,,URL or explanation how to access documentation of these features and capabilities.
+CDS-UTC-AAD,CDS,Agency Access Denial,MUST,5 bizdays,,(default artifacts apply)
+CDS-UTC-AGA,CDS,Agency Access,SHOULD,,,URL or explanation of how to request these materials.
+CDS-UTC-AGA,CDS,Agency Access,SHOULD,,,Explanation of how the provider decides whether or not to share these materials or other related policies.
+CMU-CSO-CMD,CMU,Cryptographic Module Documentation,MUST,,,List of cryptographic modules including whether these modules are validated under the NIST Cryptographic Module Validation Program or are update streams of such modules.
+CMU-CSO-UVM,CMU,Using Validated Cryptographic Modules,SHOULD,,,List of cryptographic modules including whether these modules are validated under the NIST Cryptographic Module Validation Program or are update streams of such modules.
+CMU-CSO-CAT,CMU,Configuration of Agency Tenants,SHOULD,,,List of cryptographic modules used by default including whether these modules are validated under the NIST Cryptographic Module Validation Program or are update streams of such modules.
+CPO-CSO-OVR,CPO,Overview of the Cloud Service Offering,MUST,,https://fedramp.gov/schemas/fedramp-certification-package-overview-schema-2026-06-24.json,(default artifacts apply)
+CPO-CSO-MTD,CPO,Certification Package Overview Metadata,MUST,,,(default artifacts apply)
+CPO-CSO-OSA,CPO,Overall Summary of Assessment in Certification Package,MUST,,,(default artifacts apply)
+CPO-CSX-CPM,CPO,Certification Package Maintenance for 20x,MUST,2 weeks,,(default artifacts apply)
+FRC-CSO-FCP,FRC,FedRAMP Certification Profile,MUST,,,(default artifacts apply)
+FRC-CSO-PKG,FRC,FedRAMP Certification Package,MUST,,https://fedramp.gov/schemas/fedramp-certification-package-overview-schema-2026-06-24.json,(default artifacts apply)
+FRC-CSO-JSN,FRC,FedRAMP JSON Schemas,MUST,,,(default artifacts apply)
+FRC-CSO-MRA,FRC,Maintain Responsibility and Accountability,MUST,,,(default artifacts apply)
+FRC-CSO-POP,FRC,Pick One Program Certification Type,MUST NOT,,,(default artifacts apply)
+FRC-CLA-ASF,FRC,Approved Alternative Security Frameworks,MUST,,,(default artifacts apply)
+FRC-CLA-EAM,FRC,External Assessment Materials,MUST,,,(default artifacts apply)
+FRC-CLA-MFR,FRC,Mandatory FedRAMP Rules for Class A,MUST,,,(default artifacts apply)
+FRC-CLA-RFR,FRC,Recommended FedRAMP Rules for Class A,SHOULD,,,(default artifacts apply)
+FRC-CLA-OFR,FRC,Address Optional FedRAMP Rules for Class A,MAY,,,(default artifacts apply)
+FRC-CLA-IVV,FRC,Optional Independent Verification and Validation,MAY,,,(default artifacts apply)
+FRC-APP-MLF,FRC,Marketplace Listing First,MUST,,,(default artifacts apply)
+FRC-APP-AFC,FRC,Applying for FedRAMP Certification,MUST,,,(default artifacts apply)
+FRC-APP-FCP,FRC,Fresh FedRAMP Certification Package,MUST,,,(default artifacts apply)
+FRC-APP-FIA,FRC,Fresh Independent Assessment,MUST,3 months,,(default artifacts apply)
+FRC-APP-NTP,FRC,No Third-Party Applicants,MUST NOT,,,(default artifacts apply)
+FRC-APP-USA,FRC,Updating Stale Assessments,MAY,,,(default artifacts apply)
+FRC-APS-ATO,FRC,Agency Authorization to Operate,MUST,,,(default artifacts apply)
+FRC-CCL-UCC,FRC,Upgrading Certification Class,MUST,,,(default artifacts apply)
+FRC-CCL-DCC,FRC,Downgrading Certification Class,MUST,,,(default artifacts apply)
+FRC-CCL-DNP,FRC,Downgrade Notification Period,SHOULD,,,(default artifacts apply)
+FRC-CSX-VVK,FRC,Automated Verification and Validation of Key Security Indicators,MUST,,,(default artifacts apply)
+FRC-CSX-MOT,FRC,Metrics Over Time for Key Security Indicators,MUST,,,(default artifacts apply)
+FRC-CSX-VVR,FRC,Automated Verification and Validation of FedRAMP Rules,SHOULD,,,(default artifacts apply)
+FRC-CSX-MAS,FRC,Application within MAS,SHOULD,,,(default artifacts apply)
+IEC-CSO-EFR,IEC,Evaluate FedRAMP Reportability,MUST,,,"An incident log showing an example of one or more incidents being evaluated including the reason for the determination. The log can be from real incidents, simulated incidents, or a combination of sources."
+IEC-CSO-DPR,IEC,Default PAIN Rating,MUST,,,(default artifacts apply)
+IEC-CSO-IIR,IEC,Initial Incident Report,MUST,,https://fedramp.gov/schemas/fedramp-incident-report-schema-2026-06-24.json,"An Initial Incident Report for one or more incidents. The report can be from real incidents, simulated incidents, or a combination of sources."
+IEC-CSO-OIR,IEC,Ongoing Incident Reports,MUST,,https://fedramp.gov/schemas/fedramp-incident-report-schema-2026-06-24.json,"An Ongoing Incident Report for one or more incidents. The report can be from real incidents, simulated incidents, or a combination of sources."
+IEC-CSO-FIR,IEC,Final Incident Report,MUST,,https://fedramp.gov/schemas/fedramp-incident-report-schema-2026-06-24.json,"An Final Incident Report for one or more incidents. The report can be from real incidents, simulated incidents, or a combination of sources."
+IEC-CSO-EFI,IEC,Estimate Federal Impact,SHOULD,,https://fedramp.gov/schemas/fedramp-incident-report-schema-2026-06-24.json,"An incident log showing an example of one or more incidents being evaluated including the reason for the determination. The log can be from real incidents, simulated incidents, or a combination of sources."
+IEC-CSO-AIR,IEC,Automated Incident Reporting,SHOULD,,,(default artifacts apply)
+IVV-CSO-FIA,IVV,FedRAMP Independent Assessments,MUST,1 years,,(default artifacts apply)
+IVV-CSO-SEI,IVV,Supply Evidence of Implementation,MUST,,,(default artifacts apply)
+IVV-CSO-SEE,IVV,Supply Evidence of Effectiveness,MUST,,,(default artifacts apply)
+IVV-CSO-ICP,IVV,Inclusion in Certification Package,MUST,,,(default artifacts apply)
+IVV-CSO-DUS,IVV,Document Use of Representative Samples,MUST,,,(default artifacts apply)
+IVV-CSO-STE,IVV,Supply Technical Explanations,SHOULD,,,(default artifacts apply)
+IVV-CSO-USR,IVV,Use Representative Samples,MAY,,,(default artifacts apply)
+IVV-CSO-RAA,IVV,Receiving Assessor Advice,MAY,,,(default artifacts apply)
+IVV-CSX-AIA,IVV,Annual Independent Assessments for 20x,MUST,1 years,,(default artifacts apply)
+MAS-CSO-IIR,MAS,Identify Information Resources,MUST,,,"A machine readable output containing all required data of the components of the cloud service offering that are likely to handle federal customer data or likely to impact the confidentiality, integrity, or availability of federal customer data handled by the cloud service offering."
+MAS-CSO-IIR,MAS,Identify Information Resources,MUST,,,A human readable explanation of how the machine readable output is derived.
+MAS-CSO-IIR,MAS,Identify Information Resources,MUST,,,The code for the automated process used to generate the machine readable output.
+MAS-CSO-FLO,MAS,Information Flows and Security Categories,MUST,,,"A machine readable output containing all required data of the permitted connections between components of the cloud service offering that are likely to handle federal customer data or likely to impact the confidentiality, integrity, or availability of federal customer data handled by the cloud service offering."
+MAS-CSO-FLO,MAS,Information Flows and Security Categories,MUST,,,A human readable explanation of how the machine readable output is derived.
+MAS-CSO-FLO,MAS,Information Flows and Security Categories,MUST,,,The code for the automated process used to generate the machine readable output.
+MAS-CSO-TPR,MAS,Third-Party Information Resources,MUST,,https://fedramp.gov/schemas/fedramp-certification-package-overview-schema-2026-06-24.json,"A machine readable output containing all required data of the third-party information resources of the cloud service offering that are likely to handle federal customer data or likely to impact the confidentiality, integrity, or availability of federal customer data handled by the cloud service offering."
+MAS-CSO-TPR,MAS,Third-Party Information Resources,MUST,,https://fedramp.gov/schemas/fedramp-certification-package-overview-schema-2026-06-24.json,A human readable explanation of how the machine readable output is derived.
+MAS-CSO-TPR,MAS,Third-Party Information Resources,MUST,,https://fedramp.gov/schemas/fedramp-certification-package-overview-schema-2026-06-24.json,The code for the automated process used to generate the machine readable output.
+MAS-CSO-MDI,MAS,Metadata Inclusion,MUST,,,"A machine readable output containing all required data of the metadata collected or maintained by the cloud service offering that are likely to handle federal customer data or likely to impact the confidentiality, integrity, or availability of federal customer data handled by the cloud service offering."
+MAS-CSO-MDI,MAS,Metadata Inclusion,MUST,,,A human readable explanation of how the machine readable output is derived.
+MAS-CSO-MDI,MAS,Metadata Inclusion,MUST,,,The code for the automated process used to generate the machine readable output.
+MAS-CSO-SUP,MAS,Supplemental Information,MAY,,,(default artifacts apply)
+MKT-CSO-MLR,MKT,Marketplace Listing Requirements,MUST,,,(default artifacts apply)
+MKT-CSO-PML,MKT,Provider Marketplace Listing Requests,MUST,,,(default artifacts apply)
+MKT-IIP-AGU,MKT,Agency Use Cases,MUST,,,(default artifacts apply)
+MKT-IIP-DCP,MKT,Demonstrating Continuous Progress,MUST,,,(default artifacts apply)
+MKT-IIP-DLA,MKT,Deadline for Assessment,MUST,2 years,,(default artifacts apply)
+SCG-CSO-RSC,SCG,Recommended Secure Configuration,MUST,,https://fedramp.gov/schemas/fedramp-certification-package-overview-schema-2026-06-24.json,URL to the human-readable data.
+SCG-CSO-RSC,SCG,Recommended Secure Configuration,MUST,,https://fedramp.gov/schemas/fedramp-certification-package-overview-schema-2026-06-24.json,URL to the machine-readable data.
+SCG-CSO-AUP,SCG,Use Instructions,MUST,,,URL or explanation of how to request these materials.
+SCG-CSO-AUP,SCG,Use Instructions,MUST,,,Explanation of how the provider decides whether or not to share these materials or other related policies.
+SCG-CSO-PUB,SCG,Public Secure Configuration Guidance,SHOULD,,,Explanation of how to access this information
+SCG-CSO-PUB,SCG,Public Secure Configuration Guidance,SHOULD,,,or explanation why this functionality is not available
+SCG-CSO-SDF,SCG,Secure Defaults,SHOULD,,,Explanation of how to access this information
+SCG-CSO-SDF,SCG,Secure Defaults,SHOULD,,,or explanation why this functionality is not available
+SCG-ENH-CMP,SCG,Comparison Capability,SHOULD,,,Explanation of how to access this information
+SCG-ENH-CMP,SCG,Comparison Capability,SHOULD,,,or explanation why this functionality is not available
+SCG-ENH-EXP,SCG,Export Capability,SHOULD,,,Explanation of how to access this information
+SCG-ENH-EXP,SCG,Export Capability,SHOULD,,,or explanation why this functionality is not available
+SCG-ENH-API,SCG,API Capability,SHOULD,,,Explanation of how to access this information
+SCG-ENH-API,SCG,API Capability,SHOULD,,,or explanation why this functionality is not available
+SCG-ENH-MRG,SCG,Machine-Readable Guidance,SHOULD,,,Explanation of how to access this information
+SCG-ENH-MRG,SCG,Machine-Readable Guidance,SHOULD,,,or explanation why this functionality is not available
+SCG-ENH-VRH,SCG,Versioning and Release History,SHOULD,,,Explanation of how to access this information
+SCG-ENH-VRH,SCG,Versioning and Release History,SHOULD,,,or explanation why this functionality is not available
+SCN-CSO-EVA,SCN,Evaluate Changes,MUST,,https://fedramp.gov/schemas/fedramp-significant-change-notifications-schema-2026-06-24.json,"Evidence of significant change evaluation including a description fo the change, the determined type, and an explanation for the decision. At least one example must be provided for each type of change. Real examples are prefered but the provider may use fictitious examples as long as the example provides evidence of the decision making process."
+SCN-CSO-MAR,SCN,Maintain Audit Records,MUST,,,Explanation of how FedRAMP can obtain this information.
+SCN-CSO-INF,SCN,Required Information,MUST,,https://fedramp.gov/schemas/fedramp-significant-change-notifications-schema-2026-06-24.json,A recent Significant Change Notification or sample Significant Change Notification
+SCN-CSO-HIS,SCN,Historical Notifications,MUST,,,Explanation of how FedRAMP can obtain this information.
+SCN-CSO-HRM,SCN,Human and Machine-Readable Notifications,MUST,,https://fedramp.gov/schemas/fedramp-significant-change-notifications-schema-2026-06-24.json,URL or explanation of how to request these materials.
+SCN-CSO-HRM,SCN,Human and Machine-Readable Notifications,MUST,,https://fedramp.gov/schemas/fedramp-significant-change-notifications-schema-2026-06-24.json,Explanation of how the provider decides whether or not to share these materials or other related policies.
+SCN-CSO-ARI,SCN,Additional Relevant Information,MAY,,,(default artifacts apply)
+SCN-CSO-NOM,SCN,Notification Mechanisms,MAY,,,Current list of available notification mechanisms
+SCN-CSO-EMG,SCN,Emergency Changes,MAY,,,(default artifacts apply)
+SCN-ADP-NTF,SCN,Notification Requirements,MUST,10 bizdays,,At least the most recent SCN notification including the date it was sent and the date the change was applied. Additional examples may be provided. If no SCN notifications have been sent then this artifact is not required.
+SCN-RTR-NNR,SCN,No Notification Requirements,SHOULD NOT,,,(default artifacts apply)
+SCN-TRF-NIP,SCN,Notification of Initial Plans,MUST,30 bizdays,,At least the most recent initial SCN notification for a transformative change including the date it was sent and the date the change was applied. Additional examples may be provided. If no transformative SCN notifications have been sent then this artifact is not required.
+SCN-TRF-NFP,SCN,Notification of Final Plans,MUST,10 bizdays,,At least the most recent final SCN notification for a transformative change including the date it was sent and the date the change was applied. Additional examples may be provided. If no transformative SCN notifications have been sent then this artifact is not required.
+SCN-TRF-NAF,SCN,Notification After Finishing,MUST,5 bizdays,,At least the most recent post deployment SCN notification for a transformative change including the date it was sent and the date the change was applied. Additional examples may be provided. If no transformative SCN notifications have been sent then this artifact is not required.
+SCN-TRF-NAV,SCN,Notification After Verification,MUST,5 bizdays,,At least the most recent after verification SCN notification for a transformative change including the date it was sent and the date the change was applied. Additional examples may be provided. If no transformative SCN notifications have been sent then this artifact is not required.
+SCN-TRF-UPD,SCN,Update Documentation,MUST,30 bizdays,,"Date of the most recent transformative change and the date of the corresponding documentation update. If no documentation updates were required as the result of this change, explain how this was determined."
+SCN-TRF-TPR,SCN,Third-Party Review,SHOULD,,,Third Party assesment report OR explanation why a third party assessor was not engaged
+SDR-CSO-FRR,SDR,FedRAMP Rules,MUST,,https://fedramp.gov/schemas/fedramp-security-decision-record-schema-2026-06-24.json,(default artifacts apply)
+SDR-CSO-MTD,SDR,Security Decision Record Metadata,MUST,,,(default artifacts apply)
+SDR-CSX-KSI,SDR,Key Security Indicators,MUST,,https://fedramp.gov/schemas/fedramp-security-decision-record-schema-2026-06-24.json,(default artifacts apply)
+SDR-CSX-KMT,SDR,Key Security Indicator Metrics,MUST,,https://fedramp.gov/schemas/fedramp-security-decision-record-schema-2026-06-24.json,(default artifacts apply)
+VDR-CSO-DET,VDR,Vulnerability Detection,MUST,,,(default artifacts apply)
+VDR-CSO-RES,VDR,Vulnerability Response,MUST,,,(default artifacts apply)
+VDR-CSO-FAV,VDR,Failures Are Vulnerabilities,MUST,,,(default artifacts apply)
+VDR-CSO-DFR,VDR,Design For Resilience,SHOULD,,,(default artifacts apply)
+VDR-CSO-ADT,VDR,Automate Detection,SHOULD,,,(default artifacts apply)
+VDR-CSO-DAC,VDR,Detect After Changes,SHOULD,,,(default artifacts apply)
+VDR-CSO-MSP,VDR,Maintain Security,SHOULD NOT,,,(default artifacts apply)
+VDR-CSO-AKE,VDR,Avoid KEVs,SHOULD NOT,,,(default artifacts apply)
+VDR-CSO-SIR,VDR,Sampling,MAY,,,(default artifacts apply)
+VDR-TFR-NMV,VDR,Non-Machine Verification and Validation,MUST,3 months,,(default artifacts apply)
+VDR-TFR-PDD,VDR,Persistent Drift Detection,SHOULD,14 days,,(default artifacts apply)
+VDR-TFR-PCD,VDR,Persistently Complete Detection,SHOULD,1 months,,(default artifacts apply)
+VDR-TFR-PVR,VDR,Mitigation and Remediation Expectations,SHOULD,,,(default artifacts apply)
+VDR-TFR-RMN,VDR,Remaining Vulnerabilities,SHOULD,,,(default artifacts apply)
+VDR-TFR-KEV,VDR,Remediate KEVs,SHOULD,,,(default artifacts apply)
+VDR-TFR-PSD,VDR,Persistent Sample Detection,SHOULD,3 days,,(default artifacts apply)
+VDR-TFR-MVX,VDR,Persistent Machine Verification and Validation for 20x,MUST,3 days,,(default artifacts apply)
+VER-EVA-ELX,VER,Evaluate Exploitability,MUST,,,(default artifacts apply)
+VER-EVA-EIR,VER,Evaluate Internet-Reachability,MUST,,,(default artifacts apply)
+VER-EVA-EPA,VER,Estimate Potential Agency Impact,MUST,,,(default artifacts apply)
+VER-EVA-AIA,VER,Assume It's Automatable,MUST,,,(default artifacts apply)
+VER-EVA-GRV,VER,Group Vulnerabilities,SHOULD,,,(default artifacts apply)
+VER-EVA-EFP,VER,Evaluate False Positives,SHOULD,,,(default artifacts apply)
+VER-EVA-EFA,VER,Evaluation Factors,SHOULD,,,(default artifacts apply)
+VER-RPT-PER,VER,Persistent Reporting,MUST,,https://fedramp.gov/schemas/fedramp-vulnerability-detail-report-schema-2026-06-24.json,(default artifacts apply)
+VER-RPT-VDT,VER,Vulnerability Details,MUST,,https://fedramp.gov/schemas/fedramp-vulnerability-detail-report-schema-2026-06-24.json,A recent vulnerability report or a sample vulnerability report
+VER-RPT-AVI,VER,Accepted Vulnerability Info,MUST,,https://fedramp.gov/schemas/fedramp-accepted-vulnerability-info-schema-2026-06-24.json,A recent vulnerability report or a sample vulnerability report
+VER-RPT-NID,VER,Responsible Disclosure,MUST NOT,,,(default artifacts apply)
+VER-RPT-HLO,VER,High-Level Overviews,SHOULD,,,(default artifacts apply)
+VER-RPT-RPD,VER,Responsible Public Disclosure,MAY,,,(default artifacts apply)
+VER-TFR-MHR,VER,Monthly Activity Report,MUST,1 months,,A recent vulnerability report or a sample vulnerability report
+VER-TFR-MAV,VER,Mark Accepted Vulnerabilities,MUST,192 days,,(default artifacts apply)
+VER-TFR-MRH,VER,Historical Activity,SHOULD,14 days,https://fedramp.gov/schemas/fedramp-historical-ver-activity-schema-2026-06-24.json,URL and access instructions for historical vulnerability detection and response activity in machine readable format
+VER-TFR-MRH,VER,Historical Activity,SHOULD,14 days,https://fedramp.gov/schemas/fedramp-historical-ver-activity-schema-2026-06-24.json,or an explanation of why machine readable content is not being provided
+VER-TFR-EVU,VER,Evaluate Vulnerabilities Quickly,SHOULD,5 days,,(default artifacts apply)
+VER-TFR-IRI,VER,Internet-Reachable Incidents,SHOULD,,,(default artifacts apply)
+VER-TFR-NRI,VER,Non-Internet-Reachable Incidents,MAY,,,(default artifacts apply)
