@@ -1,13 +1,13 @@
 {
-  "generated": "2026-09-17T12:55:55Z",
+  "generated": "2026-10-02T01:32:05Z",
   "ruleset_version": "2026.09.13.02",
   "schema_version": "1.1.1",
   "track": "20x",
   "class": "c",
   "counts": {
-    "BLOCKING": 437
+    "BLOCKING": 444
   },
-  "rules_emitted": 1,
+  "rules_emitted": 0,
   "rules_applicable": 168,
   "ksis_emitted": 46,
   "ksis_in_scope": 46,
@@ -45,6 +45,11 @@
     {
       "severity": "BLOCKING",
       "target": "AFC-CSO-RCV",
+      "message": "frrImplementation is empty (schema-required)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "AFC-CSO-TFG",
       "message": "frrImplementation is empty (schema-required)"
     },
     {
@@ -995,6 +1000,36 @@
     {
       "severity": "BLOCKING",
       "target": "KSI-CMT-VTD",
+      "message": "0 automated method(s); class c requires 2 per FRC-CSX-VVK"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CNA-DFP",
+      "message": "ksiImplementation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CNA-DFP",
+      "message": "ksiValidation is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CNA-DFP",
+      "message": "ksiAssessment is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CNA-DFP",
+      "message": "ksiTests is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CNA-DFP",
+      "message": "ksiEvidence is empty (schema-required for KSIs)"
+    },
+    {
+      "severity": "BLOCKING",
+      "target": "KSI-CNA-DFP",
       "message": "0 automated method(s); class c requires 2 per FRC-CSX-VVK"
     },
     {

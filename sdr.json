@@ -2,24 +2,10 @@
   "certificationPackageOverviewUri": "https://trust.example.com/cpo.json",
   "metadata": {
     "version": "0.1.0",
-    "lastUpdated": "2026-09-17T12:55:55Z",
+    "lastUpdated": "2026-10-02T01:32:05Z",
     "updateSource": "sdr_compile.py"
   },
-  "fedRampRequirements": [
-    {
-      "frrID": "AFC-CSO-TFG",
-      "frrImplementationStatus": "Implemented",
-      "frrImplementation": [
-        "Mail transport rules on the FedRAMP Security Inbox explicitly allowlist `@fedramp.gov` and `@gsa.gov` senders and exempt them from quarantine and bulk filtering."
-      ],
-      "frrValidation": [
-        "A scheduled job asserts the allowlist entries and exemption flags every 24h and pages the on-call if drift is detected."
-      ],
-      "frrAssessment": [
-        "3PAO confirmed allowlist configuration and reviewed 90 days of assertion logs."
-      ]
-    }
-  ],
+  "fedRampRequirements": [],
   "keySecurityIndicators": [
     {
       "ksiId": "KSI-CED-RAT",
@@ -68,34 +54,12 @@
     },
     {
       "ksiId": "KSI-CNA-DFP",
-      "ksiImplementation": [
-        "IAM roles and security groups are declared in Terraform; no console-created principals are permitted."
-      ],
-      "ksiValidation": [
-        "Plan-time policy checks reject privilege grants outside the declared set; a daily reconciler diffs live state against the declared baseline."
-      ],
-      "ksiAssessment": [
-        "3PAO independently re-ran the drift reconciler against a read-only role and confirmed parity."
-      ],
-      "ksiTests": [
-        "terraform-policy-gate",
-        "iam-drift-reconciler"
-      ],
-      "ksiEvidence": [
-        {
-          "evidenceType": "Report",
-          "evidenceDescription": "Policy gate results for last 30 merges",
-          "evidenceLocation": "https://trust.example.com/ev/tf-gate-2026-09-17.json",
-          "lastUpdated": "2026-09-17"
-        },
-        {
-          "evidenceType": "Log",
-          "evidenceDescription": "Daily IAM reconciliation, 0 undeclared principals",
-          "evidenceText": "2026-09-17T03:00Z reconcile ok declared=412 live=412",
-          "lastUpdated": "2026-09-17"
-        }
-      ],
-      "ksiImplementationStatus": "Implemented"
+      "ksiImplementation": [],
+      "ksiValidation": [],
+      "ksiAssessment": [],
+      "ksiTests": [],
+      "ksiEvidence": [],
+      "ksiImplementationStatus": "Not Implemented"
     },
     {
       "ksiId": "KSI-CNA-EIS",

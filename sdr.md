@@ -2,7 +2,7 @@
 
 **Certification Package:** https://trust.example.com/cpo.json  
 **SDR version:** 0.1.0  
-**Last updated:** 2026-09-17T13:05:18Z (source: sdr_compile.py)  
+**Last updated:** 2026-10-02T01:32:05Z (source: sdr_compile.py)  
 **Ruleset:** CR26 2026.09.13.02, track 20x, class C  
 **Schema version:** 1.1.1  
 
@@ -11,9 +11,9 @@
 
 ## Summary
 
-- FedRAMP Requirements: 2/168 applicable rules have a record
+- FedRAMP Requirements: 0/168 applicable rules have a record
 - Key Security Indicators: 46/46 in-scope KSIs have a record
-- Open findings: 🔴 BLOCKING × 436, 🟡 MINOR × 1
+- Open findings: 🔴 BLOCKING × 444
 
 ## FedRAMP Requirements
 
@@ -109,20 +109,17 @@ _No authored record for this rule._
 
 ---
 
-#### `AFC-CSO-TFG` Trust @fedramp.gov and @gsa.gov  ✅ Implemented
+#### `AFC-CSO-TFG` Trust @fedramp.gov and @gsa.gov  ⬜ No record
 
 *MUST* — Providers MUST treat any email originating from an @fedramp.gov or @gsa.gov email address as if it was sent from FedRAMP by default; if such a message is confirmed to originate from someone other than FedRAMP then the FedRAMP Security Inbox rules no longer apply.
 
 **Artifacts required:** Configuration settings for FSI mailbox; Automated validation to check FSI mailbox configuration
 
-**Implementation**
-- Mail transport rules on the FedRAMP Security Inbox explicitly allowlist `@fedramp.gov` and `@gsa.gov` senders and exempt them from quarantine and bulk filtering.
+_No authored record for this rule._
 
-**Internal validation**
-- A scheduled job asserts the allowlist entries and exemption flags every 24h and pages the on-call if drift is detected.
 
-**Independent assessment**
-- 3PAO confirmed allowlist configuration and reviewed 90 days of assertion logs.
+> **Open findings:**
+> - 🔴 BLOCKING: frrImplementation is empty (schema-required)
 
 ---
 
@@ -1896,22 +1893,15 @@ _No authored record for this rule._
 
 ---
 
-#### `VDR-TFR-PDD` Persistent Drift Detection  ✅ Implemented
+#### `VDR-TFR-PDD` Persistent Drift Detection  ⬜ No record
 
 *SHOULD* — Providers with Class C Certifications SHOULD persistently perform vulnerability detection on all information resources that are likely to drift, at least once every 14 days.
 
-**Implementation**
-- Drift detection runs against all production accounts on a 7-day cycle, inside the 14-day ceiling.
-
-**Internal validation**
-- Run completion and coverage percentage are exported to the compliance bus after each cycle.
-
-**Independent assessment**
-_none recorded_
+_No authored record for this rule._
 
 
 > **Open findings:**
-> - 🟡 MINOR: no independent assessment recorded
+> - 🔴 BLOCKING: frrImplementation is empty (schema-required)
 
 ---
 
@@ -2362,31 +2352,36 @@ _no evidence attached_
 
 ### CNA — Cloud Native Architecture
 
-#### `KSI-CNA-DFP` Defining Functionality and Privileges  ✅ Implemented
+#### `KSI-CNA-DFP` Defining Functionality and Privileges  🔴 Not Implemented
 
 The functionality and privileges for infrastructure and services are strictly defined.
 
 **Controls:** CM-2, SI-3
 
 **Implementation**
-- IAM roles and security groups are declared in Terraform; no console-created principals are permitted.
+_none recorded_
 
 **Internal validation**
-- Plan-time policy checks reject privilege grants outside the declared set; a daily reconciler diffs live state against the declared baseline.
+_none recorded_
 
 **Independent assessment**
-- 3PAO independently re-ran the drift reconciler against a read-only role and confirmed parity.
+_none recorded_
 
 **Automated methods** (class requires 2):
-- terraform-policy-gate
-- iam-drift-reconciler
+_none recorded_
 
 **Evidence**
 
-| Type | Description | Location / Text | Last Updated |
-|---|---|---|---|
-| Report | Policy gate results for last 30 merges | https://trust.example.com/ev/tf-gate-2026-09-17.json | 2026-09-17 |
-| Log | Daily IAM reconciliation, 0 undeclared principals | `2026-09-17T03:00Z reconcile ok declared=412 live=412` | 2026-09-17 |
+_no evidence attached_
+
+
+> **Open findings:**
+> - 🔴 BLOCKING: ksiImplementation is empty (schema-required for KSIs)
+> - 🔴 BLOCKING: ksiValidation is empty (schema-required for KSIs)
+> - 🔴 BLOCKING: ksiAssessment is empty (schema-required for KSIs)
+> - 🔴 BLOCKING: ksiTests is empty (schema-required for KSIs)
+> - 🔴 BLOCKING: ksiEvidence is empty (schema-required for KSIs)
+> - 🔴 BLOCKING: 0 automated method(s); class c requires 2 per FRC-CSX-VVK
 
 ---
 
