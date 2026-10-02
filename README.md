@@ -95,3 +95,28 @@ make scaffold   # picks up any newly-added rules/KSIs as new stub files
 Review the diff in `manifest/manifest.json` before merging -- a version bump
 can change `force` (MAY->MUST), add rule-specific artifacts, or change a
 cadence, any of which changes what's required of you.
+
+
+
+** Further Clarification on where to edit files. **
+
+Edit these — records/frr/<RULE-ID>.yaml, records/ksi/<KSI-ID>.yaml
+This is the only place narrative content lives: status, implementation, validation, not_implemented_rationale, risk_to_customers, accepted_by, tests (KSI only), evidence_sources, owner. This is what the step-by-step walkthrough above was about.
+
+Never edit these — generated, overwritten on next build:
+
+sdr.json, sdr.md, coverage.json — fully derived from records/ + evidence/. An edit here vanishes on the next make build and, worse, could mask a real gap until someone regenerates it and your edit disappears.
+manifest/manifest.json, manifest/manifest.csv — derived from the pinned rules snapshot by make manifest.
+
+Never edit these - pinned/vendored, bump via a deliberate process, not a hand edit:
+
+manifest/fedramp-consolidated-rules.json — the upstream FedRAMP snapshot. Replaced wholesale via the curl step in the README when you intentionally bump versions, never touched line-by-line.
+schemas/*.json — vendored FedRAMP schemas. Same story.
+
+Append to, don't author narrative in — evidence/collected/*.jsonl, evidence/assessments/*.jsonl
+These are machine-written by collectors or by your 3PAO's tooling, one JSON object per line. A human wouldn't normally hand-type these, but if a stopgap manual entry is ever needed, append a line in the same schema shape — never rewrite or delete existing lines, since that breaks the evidence trail.
+
+Never touch unless you're changing the pipeline itself — tooling/*.py, Makefile, .github/workflows/build.yml
+This is the automation, not content.
+
+So in practice: a person doing compliance work only ever opens files inside records/. If they're editing anything else in that repo, something's off.
